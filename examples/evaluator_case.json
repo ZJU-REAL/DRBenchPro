@@ -1,0 +1,24 @@
+{
+  "case_id": "example-001",
+  "query": "Explain a simple chain of facts about a fictional research archive.",
+  "rubrics": [
+    {
+      "rubric_id": "r1",
+      "rubric_depth": 1,
+      "parent_rubric_id": null,
+      "rubric_text": "The archive stores research notes."
+    },
+    {
+      "rubric_id": "r2",
+      "rubric_depth": 2,
+      "parent_rubric_id": "r1",
+      "rubric_text": "The research notes are organized by topic."
+    },
+    {
+      "rubric_id": "r3",
+      "rubric_depth": 3,
+      "parent_rubric_id": "r2",
+      "rubric_text": "Each topic has a chronological index."
+    }
+  ]
+}

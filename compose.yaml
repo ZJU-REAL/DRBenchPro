@@ -1,0 +1,45 @@
+services:
+  wiki-search:
+    build:
+      context: .
+    image: drbenchpro:local
+    command:
+      - drbp-wiki-serve
+      - --database
+      - /data/wiki.sqlite
+      - --snapshot-id
+      - enwiki-20260701-v1
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8091"
+    volumes:
+      - ${DRBP_WIKI_DATABASE:-./downloads/enwiki-20260701/wiki.sqlite}:/data/wiki.sqlite:ro
+    expose:
+      - "8091"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8091/health', timeout=2)"
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+  research-api:
+    build:
+      context: .
+    image: drbenchpro:local
+    environment:
+      DRBP_RUN_DIR: /data/runs
+      DRBP_WIKI_BASE_URL: http://wiki-search:8091
+      DRBP_SERVICE_API_KEY: ${DRBP_SERVICE_API_KEY:?set DRBP_SERVICE_API_KEY}
+      DRBP_STRICT_POLICY: ${DRBP_STRICT_POLICY:-false}
+    volumes:
+      - ${DRBP_RUNS_DIR:-./runs}:/data/runs
+    ports:
+      - "${DRBP_RESEARCH_PORT:-8090}:8090"
+    depends_on:
+      wiki-search:
+        condition: service_healthy

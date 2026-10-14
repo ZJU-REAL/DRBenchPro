@@ -1,0 +1,63 @@
+protocol: local_research_v1
+snapshot_id: enwiki-20260701-v1
+index_id: enwiki-20260701-v1-sqlite-fts5-bm25-v1
+limits:
+  initial_research_units: 3
+  max_research_units: 4
+  max_rounds_per_unit: 7
+  unit_concurrency: 3
+  gap_check: if_needed
+  max_gap_checks: 1
+  max_search_calls_per_unit: 3
+  max_tool_calls_per_unit: 15
+  max_open_calls_per_turn: 4
+  max_open_calls_per_unit: 12
+  max_open_chars_per_call: 6000
+  max_open_chars_per_unit: 72000
+  max_initial_units_tool_calls: 60
+  max_gap_unit_tool_calls: 12
+  max_total_tool_calls: 72
+  max_model_output_tokens_per_call: 4096  # Planner and Gap output
+  research_output_tokens: 8192
+  summary_output_tokens: 8192
+  gap_evidence_chars: 48000
+  synthesis_evidence_chars: 80000
+  final_report_max_tokens: 32768
+  max_final_report_attempts: 3
+  max_unit_retries: 1
+  require_all_units_grounded: false
+engine_options:
+  offline_search_only: true
+  require_citations: true
+  persist_full_trace: true
+  fallback_policy: provider_errors_only
+wiki:
+  base_url: http://127.0.0.1:8091
+report:
+  system_prompt: 'Research the task using only the local Wikipedia search and open
+    tools. Produce a self-contained Markdown report grounded in opened evidence. Cite
+    claims with the source identifiers returned by the tools and include a References
+    section. Return only the final report.
+
+    '
+  min_words: 300
+model:
+  provider: openrouter
+  model: google/gemma-4-31b-it
+  disable_env_proxy: false
+  omit_temperature: false
+  max_retries: 10
+  backoff_seconds: 5
+  max_backoff_seconds: 60
+  backoff_jitter_ratio: 0.2
+  request_overrides:
+    reasoning:
+      enabled: true
+    provider:
+      only:
+      - Together
+      allow_fallbacks: false
+      require_parameters: true
+  api_key_env: MODEL_API_KEY
+  base_url_env: MODEL_BASE_URL
+  max_tokens: 4096

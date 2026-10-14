@@ -1,0 +1,15 @@
+include README.md LICENSE .env.example .gitignore
+include Dockerfile Dockerfile.bundled .dockerignore compose.yaml
+recursive-include docker *.md *.sh *.env.example
+recursive-include src/drbenchpro *.py *.md *.yaml
+recursive-include data *.md *.json *.jsonl
+recursive-include examples *.json *.jsonl *.md
+prune release
+prune tests
+prune .local
+prune .pytest_cache
+prune .venv
+prune outputs
+prune dist
+prune build
+global-exclude __pycache__ *.py[cod] .DS_Store

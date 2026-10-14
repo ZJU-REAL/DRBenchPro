@@ -1,0 +1,17 @@
+{
+  "dataset_id": "drbenchpro-144-v1-release-schema-v1",
+  "case_count": 144,
+  "rubric_count": 44102,
+  "files": {
+    "benchmark/queries.jsonl": {
+      "sha256": "852b823a62b792f73a298632a37fffa44861ad9c6d04c85c9d8487477d7e234c",
+      "bytes": 172283
+    },
+    "benchmark/cases.jsonl": {
+      "sha256": "87585a6a62995f16bd4295c4455cc5482f7dffd012b730cfb0c8a2e033863722",
+      "bytes": 16632210
+    }
+  },
+  "public_download_url": null,
+  "license_status": "author decision pending; Wikipedia-derived material requires separate attribution/terms review"
+}

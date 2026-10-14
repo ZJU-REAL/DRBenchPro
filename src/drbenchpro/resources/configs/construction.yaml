@@ -1,0 +1,39 @@
+crawler:
+  language: en
+  timeout: 30
+  max_retries: 2
+  user_agent: DRBenchPro/0.1 benchmark construction
+graph:
+  max_nodes: 2000
+  max_edges: 2000
+  max_depth: 3
+  max_neighbors_per_node: 5
+  root_max_neighbors_per_node: 50
+  root_link_selection_mode: full_page_llm
+  root_full_page_llm_target_neighbors: 50
+  neighbor_selection_mode: llm
+  page_fetch_concurrency: 4
+  llm_candidate_pool_limit: 128
+  root_llm_candidate_pool_limit: 512
+relation:
+  mode: none
+sampling:
+  target_subgraphs: 3
+  depth1_branches_per_subgraph: 10
+  random_seed: 0
+  leaf_depth: 3
+  selection_mode: llm
+llm:
+  api_key_env: MODEL_API_KEY
+  base_url_env: MODEL_BASE_URL
+  model_env: MODEL_NAME
+  temperature: 0.2
+  timeout: 600
+  max_retries: 20
+  cache_enabled: false
+  record_return_info: false
+  disable_env_proxy: true
+generation:
+  query_gen_mode: less
+  query_prompt_file: query_generation_anti_leakage.md
+  rubric_chunk_size: 32

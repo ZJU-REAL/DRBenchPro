@@ -1,0 +1,45 @@
+ARG WIKIPEDIA_DATA_IMAGE
+ARG PYTHON_IMAGE=python:3.12-slim
+FROM ${WIKIPEDIA_DATA_IMAGE} AS wikipedia_data
+
+FROM ${PYTHON_IMAGE} AS application
+ARG APP_VERSION=0.3.0
+ARG SOURCE_REVISION
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+WORKDIR /app
+COPY pyproject.toml README.md LICENSE MANIFEST.in ./
+COPY src ./src
+RUN python -m pip install --no-cache-dir --no-compile ".[construction,local-research]" \
+    && rm -rf /app/build /app/src/drbenchpro.egg-info \
+    && python -c 'import importlib.metadata, os, re; assert importlib.metadata.version("drbenchpro") == os.environ["APP_VERSION"]; assert re.fullmatch("[0-9a-f]{40}", os.environ["SOURCE_REVISION"])'
+RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin drbenchpro \
+    && mkdir -p /outputs /config /opt/drbenchpro/wiki /opt/drbenchpro/licenses \
+    && chown drbenchpro:drbenchpro /outputs /config
+COPY data/ /opt/drbenchpro/data/
+COPY docker/README.md docker/*.env.example /app/docker/
+RUN drbenchpro verify-data --registry /opt/drbenchpro/data/registry.json \
+    && drbenchpro validate --cases /opt/drbenchpro/data/benchmark/cases.jsonl
+
+FROM application AS runtime
+ARG APP_VERSION=0.3.0
+ARG SOURCE_REVISION
+LABEL org.opencontainers.image.title="DRBenchPro standalone" \
+      org.opencontainers.image.version="${APP_VERSION}" \
+      org.opencontainers.image.revision="${SOURCE_REVISION}" \
+      org.drbenchpro.snapshot="enwiki-20260701-v1" \
+      org.drbenchpro.index="enwiki-20260701-v1-sqlite-fts5-bm25-v1" \
+      org.drbenchpro.benchmark="drbenchpro-144-v1-release-schema-v1" \
+      org.drbenchpro.metric="drbenchpro-coverage-v1"
+# Permission is set in COPY: no subsequent chown/chmod over the 172 GB data layer.
+# The large file has its own layer, reusable when only the application changes.
+COPY --link --from=wikipedia_data --chmod=0444 /opt/drbenchpro/wiki/enwiki.sqlite3 /opt/drbenchpro/wiki/enwiki.sqlite3
+COPY --from=wikipedia_data --chmod=0444 /opt/drbenchpro/wiki/enwiki.manifest.json /opt/drbenchpro/wiki/enwiki.snapshot-manifest.json /opt/drbenchpro/wiki/SHA256SUMS /opt/drbenchpro/wiki/WIKIPEDIA_CONTENT_NOTICE.md /opt/drbenchpro/wiki/
+COPY --from=wikipedia_data --chmod=0444 /opt/drbenchpro/licenses/* /opt/drbenchpro/licenses/
+USER drbenchpro
+EXPOSE 8091
+HEALTHCHECK --interval=30s --timeout=15s --start-period=30s --retries=3 \
+    CMD ["drbp-container", "healthcheck"]
+ENTRYPOINT ["drbp-container"]
+CMD ["serve"]

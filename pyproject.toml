@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "drbenchpro"
+version = "0.3.0"
+description = "DRBenchPro construction, rubric evaluation, structural metrics and local research framework"
+requires-python = ">=3.11"
+readme = "README.md"
+dependencies = ["PyYAML>=6,<7", "httpx>=0.27,<1", "openai>=1.60,<3"]
+[project.optional-dependencies]
+construction = ["requests>=2.31,<3", "beautifulsoup4>=4.12,<5", "rich>=13,<15"]
+local-research = ["requests>=2.31,<3", "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pydantic>=2.8,<3", "mwparserfromhell>=0.6,<1"]
+dev = ["pytest>=8,<10", "build>=1,<2"]
+[project.scripts]
+drbenchpro = "drbenchpro.cli:main"
+drbp-container = "drbenchpro.container:main"
+drbp-wiki-download = "drbenchpro.local_research.wikipedia.commands.download_snapshot:main"
+drbp-wiki-build = "drbenchpro.local_research.wikipedia.commands.build_index:main"
+drbp-wiki-serve = "drbenchpro.local_research.wikipedia.commands.serve:main"
+drbp-research-serve = "drbenchpro.local_research.commands.serve_research:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.setuptools.package-data]
+drbenchpro = ["resources/prompts/**/*.md", "resources/configs/*.yaml", "**/README.md"]

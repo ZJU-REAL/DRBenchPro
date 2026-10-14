@@ -1,0 +1,25 @@
+output_format: score_only_half
+chunk_size: 0
+retry_chunk_sizes:
+- 160
+- 110
+- 80
+- 40
+- 20
+- 10
+- 5
+- 2
+- 1
+llm:
+  api_key_env: JUDGE_API_KEY
+  base_url_env: JUDGE_BASE_URL
+  model_env: JUDGE_MODEL
+  omit_temperature: true
+  temperature: 0.2
+  timeout: 1200
+  max_retries: 10
+  backoff_seconds: 2.0
+  cache_enabled: false
+  record_return_info: false
+  disable_env_proxy: true
+  openrouter_cache_control: false
