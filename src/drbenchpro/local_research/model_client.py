@@ -201,11 +201,10 @@ class OpenAICompatibleModelClient:
         if tools:
             payload["tools"] = tools
             payload["tool_choice"] = tool_choice if tool_choice is not None else "auto"
-            if self.config.provider.strip().casefold() in {"openrouter", "litellm"}:
-                _apply_openrouter_tool_choice_mode(
-                    payload,
-                    mode=self._openrouter_tool_choice_mode,
-                )
+            _apply_openrouter_tool_choice_mode(
+                payload,
+                mode=self._openrouter_tool_choice_mode,
+            )
         payload.update(self.config.extra_body)
         if self.config.provider.strip().casefold() == "openrouter":
             usage_options = payload.get("usage")
@@ -224,14 +223,17 @@ class OpenAICompatibleModelClient:
 
         url = _chat_completions_url(self.config.base_url)
         started = time.perf_counter()
-        attempts = self.config.max_retries + 1
+        retries_used = 0
+        thinking_tool_choice_repairs = 0
+        attempt = 0
         last_error: Exception | None = None
         data: dict[str, Any] | None = None
         successful_accounting: dict[str, Any] = {}
         attempt_records: list[dict[str, Any]] = []
         local_tool_protocol_repairs = 0
         transient_provider_repairs = 0
-        for attempt in range(1, attempts + 1):
+        while True:
+            attempt += 1
             attempt_started = time.perf_counter()
             attempt_accounting: dict[str, Any] = {}
             attempt_usage: TokenUsage | None = None
@@ -275,23 +277,30 @@ class OpenAICompatibleModelClient:
                 break
             except Exception as exc:
                 last_error = exc
+                has_retry = retries_used < self.config.max_retries
+                # This exact parameter repair is separate from network retries.
+                # A no-network-retry probe may therefore still adapt once.
+                thinking_repair = (
+                    thinking_tool_choice_repairs == 0
+                    and _is_thinking_tool_choice_error(exc, payload)
+                )
                 compatibility_fallback = (
                     _openrouter_tool_choice_compatibility_fallback(
                         self.config,
                         exc,
                         payload,
                     )
-                    if attempt < attempts
+                    if has_retry or thinking_repair
                     else ""
                 )
                 local_tool_protocol_retry = (
-                    attempt < attempts
+                    has_retry
                     and
                     local_tool_protocol_repairs < self.config.max_retries
                     and _is_unrequested_local_tool_response(exc)
                 )
                 transient_provider_retry = (
-                    attempt < attempts
+                    has_retry
                     and
                     transient_provider_repairs < self.config.max_retries
                     and _is_transient_provider_error(self.config, exc)
@@ -301,9 +310,11 @@ class OpenAICompatibleModelClient:
                     compatibility_retry
                     or local_tool_protocol_retry
                     or transient_provider_retry
-                    or _is_retryable_exception(exc)
+                    or (has_retry and _is_retryable_exception(exc))
                 )
                 if compatibility_retry:
+                    if thinking_repair:
+                        thinking_tool_choice_repairs += 1
                     if compatibility_fallback == "omit_tools_for_synthesis":
                         payload.pop("tools", None)
                         payload.pop("tool_choice", None)
@@ -335,8 +346,8 @@ class OpenAICompatibleModelClient:
                     retry_delay, retry_delay_source = _retry_delay(
                         self.config,
                         exc,
-                        attempt=attempt,
-                        has_next_attempt=attempt < attempts,
+                        attempt=retries_used + 1,
+                        has_next_attempt=has_retry,
                         random_value=self._random_value,
                     )
                     retry_delay_source = (
@@ -347,8 +358,8 @@ class OpenAICompatibleModelClient:
                     retry_delay, retry_delay_source = _retry_delay(
                         self.config,
                         exc,
-                        attempt=attempt,
-                        has_next_attempt=attempt < attempts and retryable,
+                        attempt=retries_used + 1,
+                        has_next_attempt=has_retry and retryable,
                         random_value=self._random_value,
                     )
                 attempt_records.append(
@@ -386,7 +397,7 @@ class OpenAICompatibleModelClient:
                         **attempt_accounting,
                     }
                 )
-                if attempt >= attempts or not retryable:
+                if not retryable:
                     raise ModelClientError(
                         f"{self.config.source} model call failed after {attempt} attempt(s): {exc}",
                         attempts=_tag_attempts(
@@ -417,6 +428,8 @@ class OpenAICompatibleModelClient:
                             else getattr(exc, "http_status", None)
                         ),
                     ) from exc
+                if not (compatibility_retry and thinking_repair):
+                    retries_used += 1
                 if retry_delay:
                     self._sleep(retry_delay)
         if data is None:  # pragma: no cover - guarded by loop above
@@ -450,6 +463,8 @@ class OpenAICompatibleModelClient:
                 **route_identity,
                 "fallback_used": False,
                 "attempt_count": len(attempt_records),
+                "tool_choice_mode": self._openrouter_tool_choice_mode,
+                "thinking_tool_choice_repairs": thinking_tool_choice_repairs,
                 "route_attempts": _tag_attempts(
                     attempt_records,
                     route=route_identity,
@@ -863,29 +878,36 @@ def _apply_openrouter_tool_choice_mode(
     return True
 
 
+def _is_thinking_tool_choice_error(exc: Exception, payload: dict[str, Any]) -> bool:
+    """Recognize only the explicit thinking/forced-tool parameter rejection."""
+    message = str(exc).casefold()
+    tools = payload.get("tools")
+    if (getattr(exc, "http_status", None) != 400
+            or "tool_choice parameter does not support being set to required or object" not in message
+            or "thinking mode" not in message or not isinstance(tools, list)):
+        return False
+    name = _specific_tool_choice_name(payload.get("tool_choice"))
+    if not name and payload.get("tool_choice") == "required" and len(tools) == 1:
+        name = tools[0].get("function", {}).get("name", "")
+    return name in _LOCAL_RESEARCH_TOOL_NAMES and any(
+        tool.get("function", {}).get("name") == name for tool in tools
+    )
+
+
 def _openrouter_tool_choice_compatibility_fallback(
     config: ModelConfig,
     exc: Exception,
     payload: dict[str, Any],
 ) -> str:
+    # The explicit error is sufficient even with a generic compatible config.
+    if _is_thinking_tool_choice_error(exc, payload):
+        return "auto_single_tool_choice"
     if config.provider.strip().casefold() not in {"openrouter", "litellm"}:
         return ""
     http_status = getattr(exc, "http_status", None)
     message = str(exc).casefold()
     tools = payload.get("tools")
     tool_choice = payload.get("tool_choice")
-    if (
-        http_status == 400
-        and "tool_choice parameter does not support being set to required or object"
-        in message
-        and "thinking mode" in message
-        and isinstance(tools, list)
-        and (
-            _specific_tool_choice_name(tool_choice)
-            or (tool_choice == "required" and len(tools) == 1)
-        )
-    ):
-        return "auto_single_tool_choice"
     if http_status == 404 and "no endpoints found" in message and "tool_choice" in message:
         if _specific_tool_choice_name(tool_choice):
             return "generic_required_tool_choice"

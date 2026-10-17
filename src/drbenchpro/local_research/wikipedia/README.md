@@ -5,11 +5,16 @@ The reference snapshot is `enwiki-20260701-v1`, with canonical index identity
 0, 2,200-character chunks, 200-character overlap and the `mwparserfromhell` cleaner.
 Noncanonical build settings receive a different index identity.
 
-The [standalone container](../../../../docker/README.md) embeds the finalized
+The published
+[DRBenchPro Local Research Framework — Docker Image](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime)
+embeds the finalized
 SQLite/FTS5 database and manifests, so its users do not download raw dumps or
-build an index. It starts Wiki without model credentials and checks the complete
+build an index. Follow the [download and Docker import guide](../../../../docker/README.md#download-the-framework-image),
+then start the image's Wikipedia service. It starts Wiki without model credentials and checks the complete
 canonical data identity. Data and notices remain read-only in the image.
 
+The raw dump/build workflow below is for source-based reconstruction; the
+prebuilt Framework Image is the direct way to obtain the matching index.
 For source installations, install the `local-research` extra. The following are
 installed commands:
 

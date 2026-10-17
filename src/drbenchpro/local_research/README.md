@@ -1,9 +1,22 @@
 # Local Research Framework
 
-Install `.[local-research]`. This package implements the DRBenchPro Local Research
+This package implements the DRBenchPro Local Research
 Framework: Planner → concurrent Units → optional Gap → Synthesis. Wikipedia
 retrieval is nested here because it is this framework's tool environment. Scoring
 and standalone metric computation do not require a Wikipedia service.
+
+To run the prebuilt environment, download
+[**DRBenchPro Local Research Framework — Docker Image**](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime)
+and follow [download, verification and Docker import](../../../docker/README.md#download-the-framework-image).
+It includes the application, benchmark and fixed Wikipedia index. No host
+installation of DRBenchPro or index rebuild is required; the download/import
+helpers use Python and the HF CLI. The service runs on your machine, and you
+provide model/Judge APIs. Report evaluation alone needs neither this image nor Wiki.
+
+For a source installation, install `.[local-research]`, run
+`drbenchpro init-config --output configs`, and prepare the Wikipedia service.
+The [benchmark dataset](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro)
+is also bundled in the GitHub checkout; downloading it again is optional.
 
 ```bash
 # After setting up the Wikipedia service and exporting MODEL_*:
@@ -73,7 +86,16 @@ citation validation, failed-unit markers and shared-budget accounting apply to
 each run. Provider/native web search is forbidden; only the
 local Search/Open contract is allowed. The research model client's `max_retries`
 means retries **after** the first attempt (unlike the judge client's total-attempt
-setting). The selected profiles specify retry backoff and reasoning/provider
+setting). An explicit thinking-mode rejection of forced `tool_choice` permits
+one additional parameter-repair request per logical call, independently of that
+retry allowance. The client offers only the requested local tool with `auto`,
+remembers this mode for later forced-tool requests on that client, and leaves
+thinking/reasoning settings unchanged. This also works with the generic
+OpenAI-compatible configuration; unrelated API errors do not trigger it.
+Normal agent rounds still check and execute calls individually, return tool
+errors to the model, and require successful Search/Open evidence within the
+existing budgets. Missing optional arguments and numeric strings retain the
+Wiki client's existing defaults and conversions. The selected profiles specify retry backoff and reasoning/provider
 settings. Model output limits do not guarantee that a provider accepts those limits.
 
 ## Results
@@ -172,10 +194,16 @@ no network calls. Normal preflight additionally validates the fixed Wiki manifes
 searches for `research` and opens one short result; these diagnostic results are
 never added to a benchmark run or its tool budget. Only `--probe-model` sends
 synthetic evidence to a model. It checks Search/Open tool calls, preservation of
-source IDs and visible output, with up to three requests per configured route,
-30-second request timeouts and no automatic retries/fallback. Tests of forced
-specific tool choice are deliberately strict: a failed probe is diagnostic, not
-proof the model cannot use the framework's normal auto tool selection.
+source IDs and visible output, with three base logical calls per configured
+route and 30-second request timeouts. Each Search/Open step allows one correction
+for missing or invalid calls, using the same argument handling as the real Wiki
+client but synthetic tool results. Multiple calls are handled individually; one
+invalid call does not discard a valid sibling. The exact thinking/tool-choice
+parameter repair described above is available even with network retries disabled.
+There are at most five logical calls and nine HTTP attempts per route; normally
+three requests, or four when a compatibility repair is needed. Probe output
+reports usage, repair/correction counts and observed tool-choice modes. Network
+retries and route fallback remain disabled; a failed probe stays diagnostic.
 A 512-token probe can exhaust a reasoning model's output budget; increase
 `--probe-max-tokens` explicitly when investigating that failure. Never silently
 change the production reasoning settings to make a probe pass.

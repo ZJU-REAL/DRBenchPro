@@ -1,0 +1,59 @@
+DRBenchPro Benchmark Data License
+
+Copyright (c) 2026 REAL Lab, for project-owned contributions.
+
+Scope
+-----
+This notice applies to data/benchmark/cases.jsonl,
+data/benchmark/queries.jsonl and the accompanying source-link compilation
+data/WIKIPEDIA_SOURCES.txt, including their identical copies distributed on
+Hugging Face or in a DRBenchPro Framework Image. It also applies to the
+benchmark content represented by these files after format conversion.
+
+License grant
+-------------
+To the extent REAL Lab holds copyright or database rights, the benchmark data
+identified above, including project-owned contributions to its content,
+selection and arrangement, is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0):
+
+https://creativecommons.org/licenses/by-sa/4.0/
+
+The unmodified license text is included in licenses/CC-BY-SA-4.0.txt. This
+notice identifies the material and rights covered; it does not change the
+standard license or add restrictions. The data is provided as-is, subject to
+the disclaimer of warranties and limitation of liability in that license.
+
+Attribution and reuse
+---------------------
+When sharing the licensed material, retain the supplied credit to DRBenchPro
+and REAL Lab, source attribution, copyright and license notices, and indicate
+modifications as required by the license. When sharing adapted material,
+follow the license's ShareAlike conditions. Academic citation is encouraged
+separately and is not an additional license condition.
+
+Merely using the benchmark to evaluate a model does not require publishing
+that model or its source code under this license. Shared copies or adaptations
+of licensed benchmark content remain subject to the applicable conditions.
+
+Upstream material
+-----------------
+Wikipedia-derived material retains its applicable upstream licenses,
+attribution requirements and any page-specific notices. This notice does not
+revoke, restrict or replace upstream permissions or claim ownership of facts,
+public-domain material or third-party rights. It does not assert that every
+generated query or rubric is copyrightable or is an adaptation.
+
+Wikipedia source text is credited to Wikipedia contributors. Queries and
+rubrics were generated from Wikipedia page relationships and evidence, then
+organized into parent-child structures and normalized benchmark records.
+Each rubric's source_title and target_title identify English Wikipedia articles
+at https://en.wikipedia.org/wiki/<article-title>, replacing spaces with
+underscores and URL-encoding the title. Article histories identify contributors.
+The source links are listed in data/WIKIPEDIA_SOURCES.txt.
+Applicable upstream terms are described in section 7 of the Wikimedia Terms
+of Use: https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use#7._Licensing_of_Content
+
+Original DRBenchPro software is licensed separately under MIT in LICENSE.
+The standalone Wikipedia index, external model outputs, paper assets and
+third-party components are outside this data grant and retain their own terms.

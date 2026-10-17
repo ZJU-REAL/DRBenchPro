@@ -1,9 +1,11 @@
-include README.md LICENSE .env.example .gitignore
+include README.md LICENSE DATA_LICENSE .env.example .gitignore
+recursive-include licenses *.txt
 include Dockerfile Dockerfile.bundled .dockerignore compose.yaml
 recursive-include docker *.md *.sh *.env.example
 recursive-include src/drbenchpro *.py *.md *.yaml
-recursive-include data *.md *.json *.jsonl
+recursive-include data *.md *.json *.jsonl *.txt
 recursive-include examples *.json *.jsonl *.md
+recursive-include assets/readme *.webp
 prune release
 prune tests
 prune .local
@@ -12,4 +14,5 @@ prune .venv
 prune outputs
 prune dist
 prune build
+prune website
 global-exclude __pycache__ *.py[cod] .DS_Store

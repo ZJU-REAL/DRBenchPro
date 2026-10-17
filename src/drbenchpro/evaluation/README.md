@@ -26,6 +26,12 @@ Run these commands from the repository root after installation. Set
 compatible API base, normally ending in `/v1`; use a model name accepted by your
 endpoint. Keep the Judge model and configuration consistent when comparing systems.
 
+The GitHub checkout already includes the full benchmark. You can also preview or
+download it from [HF](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro);
+follow [get the benchmark](../../../data/README.md#get-the-benchmark) to put the
+original JSONL files under `data/benchmark/` and verify them. The commands below
+use these local files. The Framework Image is optional for this workflow.
+
 Generate reports from `data/benchmark/queries.jsonl` using your own model, and
 save them as `my-reports.jsonl` following the input format below. The commands
 use the installed default evaluation configuration:

@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DRBenchPro measures the breadth and depth of knowledge coverage in deep research reports: 144 research cases, 24 domains, and 44,102 evidence-grounded rubrics.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="DRBenchPro: A Knowledge-Centric Benchmark for Professional Deep Research Agents">
+  <meta property="og:description" content="A benchmark for structured knowledge coverage in deep research reports, with topology-aware breadth and depth metrics.">
+  <meta property="og:type" content="website">
+  <title>DRBenchPro: A Knowledge-Centric Benchmark for Professional Deep Research Agents</title>
+  <link rel="icon" href="assets/icons/database.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=ebde513eebae">
+  <link rel="stylesheet" href="assets/css/leaderboard.css">
+  <script src="assets/js/site.js?v=74893140a523" defer></script>
+  <script src="assets/js/leaderboard.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to content</a>
+  <main>
+    <header class="publication-header section">
+      <div class="container is-max-desktop has-text-centered">
+        <h1 class="publication-title"><strong>DRBenchPro:</strong> A <span class="no-wrap">Knowledge-Centric</span> Benchmark for Professional Deep Research Agents</h1>
+        <div class="publication-authors">
+          <span>Han Huang<sup>1,*</sup>,</span>
+          <span>Yuchen Yan<sup>1,*</sup>,</span>
+          <span>Xingyu Wu<sup>1</sup>,</span>
+          <span>Yijun Li<sup>1</sup>,</span>
+          <br class="author-break">
+          <span>Chao Deng<sup>2</sup>,</span>
+          <span>Jie Liu<sup>2</sup>,</span>
+          <span>Jin Ma<sup>2</sup>,</span>
+          <span><a href="mailto:syl@zju.edu.cn">Yongliang Shen</a><sup>1,†</sup></span>
+        </div>
+        <p class="publication-affiliations"><span><sup>1</sup>Zhejiang University</span> <span><sup>2</sup>Tencent</span></p>
+        <p class="publication-contributions"><span><sup>*</sup>Equal contribution</span> <span><sup>†</sup>Corresponding author</span></p>
+        <div class="publication-links" aria-label="Project resources">
+          <button class="resource-button" type="button" disabled title="arXiv link coming soon" aria-label="arXiv (link coming soon)"><img class="icon-image" src="assets/icons/file-text.svg" alt="">arXiv</button>
+          <a class="resource-button" href="https://github.com/ZJU-REAL/DRBenchPro" target="_blank" rel="noopener noreferrer"><img class="icon-image" src="assets/icons/code-xml.svg" alt="">Code</a>
+          <a class="resource-button" href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro" target="_blank" rel="noopener noreferrer"><img class="icon-image" src="assets/icons/database.svg" alt="">Dataset</a>
+          <a class="resource-button" href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime" target="_blank" rel="noopener noreferrer" title="DRBenchPro Local Research Framework — Docker Image"><img class="icon-image" src="assets/icons/code-xml.svg" alt="">Framework Image</a>
+        </div>
+        <ul class="benchmark-stats" aria-label="Benchmark scale">
+          <li><strong>24</strong> Domains</li>
+          <li><strong>144</strong> Research Cases</li>
+          <li><strong>44,102</strong> Rubrics</li>
+          <li><strong>16</strong> Evaluated Agents</li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="leaderboard" class="leaderboard-section section" aria-labelledby="leaderboard-heading" hidden>
+      <div class="leaderboard-container">
+        <div class="leaderboard-card" data-tone="overall" data-state="loading">
+          <div class="leaderboard-progress" aria-hidden="true"><span></span></div>
+          <header class="leaderboard-heading">
+            <div class="leaderboard-heading-copy">
+              <p class="leaderboard-eyebrow">DRBenchPro Leaderboard</p>
+              <h2 id="leaderboard-heading">Overall Coverage</h2>
+              <p id="leaderboard-scope">All Domains · 144 Research Cases</p>
+            </div>
+            <div class="leaderboard-playback" aria-label="Leaderboard playback">
+              <span id="leaderboard-position" aria-label="Scene 1 of 27">01 <span>/ 27</span></span>
+              <button type="button" id="leaderboard-previous" class="leaderboard-icon-button" aria-label="Previous leaderboard">‹</button>
+              <button type="button" id="leaderboard-play" class="leaderboard-play-button" aria-label="Pause automatic playback">Pause</button>
+              <button type="button" id="leaderboard-next" class="leaderboard-icon-button" aria-label="Next leaderboard">›</button>
+            </div>
+          </header>
+          <div class="leaderboard-controls">
+            <div class="leaderboard-metrics" role="group" aria-label="Global leaderboards">
+              <button type="button" data-leaderboard-metric="overall" aria-pressed="true">Overall Coverage</button>
+              <button type="button" data-leaderboard-metric="breadth" aria-pressed="false">Breadth</button>
+              <button type="button" data-leaderboard-metric="depth" aria-pressed="false">Depth</button>
+            </div>
+            <label class="leaderboard-domain-label" for="leaderboard-domain">Domain
+              <select id="leaderboard-domain"><option value="">All Domains</option></select>
+            </label>
+          </div>
+          <div class="leaderboard-table" role="table" aria-label="Agent knowledge coverage rankings">
+            <div class="leaderboard-table-head leaderboard-columns" role="row">
+              <span role="columnheader">Rank</span><span role="columnheader">Agent &amp; Evaluation Category</span><span role="columnheader">Knowledge Coverage<span class="leaderboard-scale-axis" aria-hidden="true"><span id="leaderboard-scale-min">10</span><span id="leaderboard-scale-max">70</span></span></span><span id="leaderboard-score-label" role="columnheader">Overall (%)</span>
+            </div>
+            <div id="leaderboard-rows" role="rowgroup"></div>
+          </div>
+          <footer class="leaderboard-footer">
+            <p id="leaderboard-scale">Bar scale: 10–70% · Higher is better</p>
+            <p class="leaderboard-count">All 16 agents · Scores (%)</p>
+          </footer>
+          <p id="leaderboard-fallback" hidden>The complete benchmark results are available in <a href="#results">Main Results</a>.</p>
+          <p id="leaderboard-announcement" class="sr-only" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="teaser section">
+      <div class="container is-max-desktop">
+        <figure>
+          <button type="button" class="figure-trigger" data-zoom="assets/images/teaser.webp" data-title="Structured knowledge coverage in DRBenchPro" disabled aria-label="Enlarge the DRBenchPro teaser">
+            <img class="teaser-desktop" src="assets/images/teaser.webp" alt="Reports with the same flat coverage show broad and shallow, focused and continuous, or distributed and uneven coverage; native search LLMs have different breadth and depth rankings." width="2200" height="507" fetchpriority="high">
+            <span class="teaser-mobile">
+              <img src="assets/images/teaser-concept.webp" alt="Three reports cover different directions and knowledge chains in the same reference tree." width="1300" height="599">
+              <img src="assets/images/teaser-results.webp" alt="Breadth and depth leaderboards for five native search LLMs." width="1300" height="599">
+            </span>
+          </button>
+          <figcaption class="teaser-caption">Reports with the same flat coverage can exhibit different coverage patterns over a shared reference tree. Breadth and depth also reveal distinct rankings among native search LLMs.</figcaption>
+
+        </figure>
+      </div>
+    </div>
+
+    <section id="abstract" class="section section-muted">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">Abstract</h2>
+        <div class="reading-width content">
+          <p>Deep research agents gather information from multiple sources and synthesize it into reports on complex, open-ended questions. Existing benchmarks assess report quality along several dimensions, but lack a dedicated knowledge-centric evaluation of which research directions a report covers and how deeply it explores them. We introduce <strong>DRBenchPro</strong>, a benchmark that makes structured knowledge coverage the primary evaluation target. Our automated pipeline builds local knowledge trees from Wikipedia and uses sampled subgraphs to generate research queries and evidence-grounded rubrics. Each rubric corresponds to a relation in the tree, preserving the structure of the knowledge being evaluated. Agents receive only the research query. This structure allows us to measure <em>breadth</em> across major research directions and <em>depth</em> along related knowledge chains, with their geometric mean giving <em>overall coverage</em>. The benchmark includes 144 cases across 24 domains and 44,102 rubrics. Evaluating 16 deep research agents reveals different strengths in breadth and depth, with the best-performing agent reaching 57.04% overall coverage. Rubric judgments agree closely with human annotations, and agent rankings remain stable across the tested metric configurations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">Benchmark Construction and Evaluation</h2>
+        <figure class="paper-figure">
+          <div class="figure-scroll" tabindex="0" role="region" aria-label="Benchmark construction diagram; scroll horizontally on small screens">
+            <button class="figure-trigger wide-diagram" type="button" data-zoom="assets/images/construction.webp" data-title="Benchmark construction and topology-aware coverage evaluation" disabled aria-label="Enlarge the construction diagram"><img src="assets/images/construction.webp" alt="Wikipedia root entities are expanded into local graphs, sampled into research cases, and used to generate queries and hidden edge-level rubrics. Judge verdicts are aggregated over the tree into breadth, depth, and overall coverage." width="2200" height="1399" loading="lazy"></button>
+          </div>
+
+        </figure>
+        <div class="reading-width content method-copy">
+          <p>We construct Wikipedia-derived local knowledge trees around 48 root entities spanning 24 domains. Each root yields three research cases by sampling 10 complete branches. Research queries and evidence-grounded rubrics are generated from the same sampled subgraph, with each retained relation edge defining one rubric. Agents receive only the query; the reference tree and rubrics remain hidden.</p>
+          <p>An LLM judge evaluates each report against the hidden rubrics. Its verdicts are mapped to binary coverage values and aggregated bottom-up over the reference tree.</p>
+        </div>
+        <div class="metric-explanation">
+          <h3 class="subsection-title">What Do We Measure?</h3>
+          <div class="metric-grid">
+            <div class="metric-block breadth"><h4>Breadth</h4><p>Breadth measures how comprehensively a report covers the selected research directions.</p></div>
+            <div class="metric-block depth"><h4>Depth</h4><p>Depth measures coverage along related knowledge chains in the reference tree.</p></div>
+            <div class="metric-block overall"><h4>Overall Coverage</h4><p>Overall coverage combines case-level breadth and depth through their geometric mean.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section section-muted">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">Main Results</h2>
+        <figure class="original-results-figure">
+          <div class="figure-scroll" tabindex="0" role="region" aria-label="Original paper Table 2; scroll horizontally on small screens">
+            <button class="figure-trigger original-results-table" type="button" data-zoom="assets/images/main-results.webp" data-title="Main results on DRBenchPro (%)" disabled aria-label="Enlarge original paper Table 2">
+              <img src="assets/images/main-results.webp" alt="Original paper Table 2: all 16 evaluated agents in three categories, with Overall Coverage, Breadth and Depth (%). Bold and underlined values mark the best and second-best results." width="2199" height="1145" loading="lazy">
+            </button>
+          </div>
+        </figure>
+        <div class="reading-width content results-analysis">
+          <p>Claude Opus 5 achieves the highest overall coverage (57.04%) and ranks first in both breadth (53.09%) and depth (61.91%). Grok 4.5 and o3 Deep Research follow, with relatively stronger breadth and depth, respectively. High overall coverage therefore requires both comprehensive coverage across major directions and progress along related knowledge chains.</p>
+          <p class="results-format-note">Bold and underlined scores indicate the best and second-best results across all agents, respectively, based on unrounded values.</p>
+        </div>
+        <div class="reading-width evaluation-categories">
+          <h3 class="subsection-title">Evaluation Categories</h3>
+          <p><strong>(1) Deep Research Systems.</strong> End-to-end research agents designed for autonomous, long-horizon investigation, combining planning, iterative evidence gathering, and long-form synthesis.</p>
+          <p><strong>(2) Native Search LLMs.</strong> Models that integrate provider-native web search directly into generation without a separate Deep Research product workflow.</p>
+          <p><strong>(3) Backbone LLMs under the local research framework.</strong> Backbone LLMs share a fixed Wikipedia snapshot, Search/Open tools, research workflow, and budget, with provider-native web search disabled.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis" class="section">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">Analysis</h2>
+        <div class="insight-grid">
+          <article class="insight-card coverage-insight"><h4>Coverage Profiles</h4><p>Similar overall coverage can conceal different breadth–depth profiles and knowledge paths.</p></article>
+          <article class="insight-card domain-insight"><h4>Domain Differences</h4><p>Agent coverage varies across domains, revealing domain-specific strengths and gaps.</p></article>
+          <article class="insight-card activity-insight"><h4>Research Activity</h4><p>More research activity and longer reports do not necessarily imply higher knowledge coverage.</p></article>
+        </div>
+        <div class="analysis-explorer" data-carousel role="region" aria-roledescription="carousel" aria-label="Research analyses">
+          <button class="carousel-arrow carousel-previous js-only" data-carousel-previous type="button" aria-label="Previous analysis"><img class="icon-image" src="assets/icons/chevron-down.svg" alt=""></button>
+          <div class="carousel-track analysis-track" data-carousel-track tabindex="0" aria-label="Analyses; use left and right arrow keys or swipe to browse">
+            <div id="panel-cases" class="analysis-panel carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <h3 class="panel-title">Different Coverage Patterns, Different Knowledge Paths</h3>
+              <figure class="paper-figure analysis-image-frame case-study-figure">
+                <div class="figure-scroll" tabindex="0" role="region" aria-label="Case study figure; scroll horizontally on small screens"><button class="figure-trigger case-diagram" type="button" data-zoom="assets/images/case-studies.webp" data-title="Case studies: Lew Grade and the temperance movement" disabled aria-label="Enlarge the case studies"><img src="assets/images/case-studies.webp" alt="Coverage trees compare Perplexity Sonar Deep Research and Grok 4.5 on Lew Grade, and o3 Deep Research and GPT-5.6 Sol on the temperance movement." width="2200" height="480" loading="lazy"></button></div>
+                <figcaption class="case-figure-legend" aria-label="Branch depth is encoded by ray length; branch breadth by ray width and opacity. Legend values range from zero to one.">
+                  <img src="assets/images/case-legend-depth.webp" alt="Depth (length): reference marks at 0, 0.2, 0.4, 0.6 and 0.7." width="1196" height="160" loading="lazy">
+                  <img src="assets/images/case-legend-breadth.webp" alt="Breadth (width, opacity): increasingly thick, opaque rays at 0.2, 0.6 and 1.0." width="1668" height="160" loading="lazy">
+                </figcaption>
+              </figure>
+              <div class="panel-copy case-analysis">
+                <p>Gray rays mark the same ten research directions for each pair of reports. Colored ray length encodes branch depth, while width and opacity encode branch breadth. Values above each agent report overall coverage (O), breadth (B), and depth (D) in percent; the legend uses normalized branch-level values.</p>
+                <p><strong>Lew Grade.</strong> Perplexity Sonar Deep Research and Grok 4.5 achieve similar overall coverage (38.83% vs. 40.31%) with sharply inverted profiles. Perplexity explores selected knowledge chains farther (breadth 27.33%, depth 55.19%), while Grok covers major directions more comprehensively (breadth 54.48%, depth 29.82%). Similar overall scores can therefore conceal different research strategies.</p>
+                <p><strong>Temperance movement.</strong> o3 Deep Research and GPT-5.6 Sol obtain similar breadth (32.11% vs. 34.64%), depth (48.26% vs. 50.43%), and overall coverage (39.37% vs. 41.79%). Yet their branch-level profiles differ substantially: the reports emphasize different directions and progress along different knowledge chains within the same research space.</p>
+              </div>
+            </div>
+            <div id="panel-domains" class="analysis-panel carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <div class="analysis-panel-heading"><h3 class="panel-title">Coverage Across 24 Domains</h3><div class="metric-switch js-only" role="group" aria-label="Domain heatmap metric"><button type="button" data-domain="overall" aria-pressed="true">Overall</button><button type="button" data-domain="breadth" aria-pressed="false">Breadth</button><button type="button" data-domain="depth" aria-pressed="false">Depth</button></div></div>
+              <figure class="paper-figure analysis-image-frame">
+                <div class="figure-scroll" tabindex="0" role="region" aria-label="Domain heatmap; scroll horizontally on small screens"><button id="domain-figure" class="figure-trigger heatmap-diagram" type="button" data-zoom="assets/images/domain-overall.webp" data-title="Overall coverage (%) across 24 domains" disabled aria-label="Enlarge the domain heatmap"><img id="domain-image" src="assets/images/domain-overall.webp" alt="Overall coverage (%) for 16 agents across 24 domains; each agent–domain score is averaged over six cases." width="2200" height="935" loading="lazy"></button></div>
+
+              </figure>
+              <p id="domain-metric-label" class="domain-metric-caption" aria-live="polite">Overall Coverage (%)</p>
+              <p id="domain-copy" class="panel-copy">Overall coverage varies across the 24 domains, with each agent–domain score averaged over six cases. Across agents, overall coverage is highest in Software Development, Science &amp; Technology, and Health, and lowest in Industrial and Food &amp; Dining. Claude Opus 5 leads in 23 domains, while o3 Deep Research leads in Literature.</p>
+            </div>
+            <div id="panel-activity" class="analysis-panel carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <h3 class="panel-title">Research Activity and Knowledge Coverage</h3>
+              <figure class="paper-figure analysis-image-frame">
+                <div class="figure-scroll" tabindex="0" role="region" aria-label="Original paper Table 13; scroll horizontally on small screens">
+                  <button class="figure-trigger research-activity-table" type="button" data-zoom="assets/images/research-activity.webp" data-title="Research activity and coverage on Horn &amp; Hardart S03" disabled aria-label="Enlarge original paper Table 13"><img src="assets/images/research-activity.webp" alt="Original paper Table 13: GLM 5.2 and DeepSeek V4 Flash on Horn and Hardart S03, with Search, Open, unique pages, tokens, report words, breadth, depth and overall coverage. GLM 5.2 uses more research resources but achieves lower coverage on all three metrics." width="2199" height="312" loading="lazy"></button>
+                </div>
+              </figure>
+              <p class="panel-copy">Under the same local research framework, GLM 5.2 makes more Search and Open calls and produces a longer report on Horn &amp; Hardart, yet DeepSeek V4 Flash achieves higher knowledge coverage. This case highlights the importance of effective planning and evidence selection. Pages denotes unique Wikipedia pages returned during research.</p>
+            </div>
+          </div>
+          <button class="carousel-arrow carousel-next js-only" data-carousel-next type="button" aria-label="Next analysis"><img class="icon-image" src="assets/icons/chevron-down.svg" alt=""></button>
+          <div class="carousel-pagination js-only" role="group" aria-label="Choose an analysis">
+            <button type="button" data-carousel-go="0" aria-label="Show case studies" aria-current="true"><span></span></button>
+            <button type="button" data-carousel-go="1" aria-label="Show domain coverage"><span></span></button>
+            <button type="button" data-carousel-go="2" aria-label="Show research activity"><span></span></button>
+          </div>
+          <p class="sr-only" data-carousel-status role="status" aria-live="polite">Different Coverage Patterns, Different Knowledge Paths, 1 of 3.</p>
+        </div>
+
+        <section class="detail-section" id="validation" aria-labelledby="validation-heading">
+          <h3 class="detail-section-heading" id="validation-heading">Benchmark Statistics and Validation</h3>
+          <div class="detail-body validation-body">
+            <div class="validation-carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Benchmark statistics and validation: original paper Tables 7 and 3–6">
+              <button class="carousel-arrow carousel-previous js-only" data-carousel-previous type="button" aria-label="Previous statistics or validation table"><img class="icon-image" src="assets/icons/chevron-down.svg" alt=""></button>
+              <div class="validation-track carousel-track" data-carousel-track tabindex="0" aria-label="Validation cards; use left and right arrow keys or swipe to browse">
+                <article class="validation-slide carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="1 of 5: Table 7, Benchmark Statistics">
+                  <h3 class="validation-slide-title">Benchmark Statistics</h3>
+                  <figure class="validation-image-frame">
+                    <div class="figure-scroll" tabindex="0" role="region" aria-label="Original Table 7; scroll horizontally on small screens">
+                      <button class="figure-trigger validation-table-statistics" type="button" data-zoom="assets/images/benchmark-statistics.webp" data-title="DRBenchPro statistics" disabled aria-label="Enlarge original paper Table 7"><img src="assets/images/benchmark-statistics.webp" alt="Original Table 7, all three panels: benchmark composition, graph and case structure, and rubric distribution by hop distance. 24 domains, 48 roots, 144 cases and 44,102 rubrics; 80.45% of rubrics occur at hop 3." width="2199" height="1300" loading="lazy"></button>
+                    </div>
+                  </figure>
+                  <p class="validation-slide-analysis">Computed over 48 local graphs and 144 sampled subgraphs, these statistics describe the benchmark’s scale and structure. Each of 24 domains contributes two roots and six cases; each case retains 10 complete branches and supports up to three hops. The benchmark contains 44,102 rubrics, averaging 306.3 per case. Although 80.45% occur at the third hop, normalized topology-aware aggregation makes their contribution depend on coverage and tree position rather than raw counts alone.</p>
+                </article>
+                <article class="validation-slide carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="2 of 5: Table 3, Metric Sensitivity">
+                  <h3 class="validation-slide-title">Metric Sensitivity</h3>
+                  <figure class="validation-image-frame">
+                    <div class="figure-scroll" tabindex="0" role="region" aria-label="Original Table 3; scroll horizontally on small screens">
+                      <button class="figure-trigger validation-table-sensitivity" type="button" data-zoom="assets/images/validation-sensitivity.webp" data-title="Sensitivity of agent rankings to metric hyperparameters" disabled aria-label="Enlarge original paper Table 3"><img src="assets/images/validation-sensitivity.webp" alt="Original Table 3: all nine parameter configurations, alpha, eta, rho, beta, Spearman correlations, exact reversals and practical reversals. Values are paired breadth/depth." width="2200" height="1235" loading="lazy"></button>
+                    </div>
+                  </figure>
+                  <p class="validation-slide-analysis">To test ranking robustness to metric parameter choices, we vary aggregation parameters and recompute mean breadth and depth for 16 agents over all 144 cases. We compare rankings with the default configuration using Spearman correlations and pairwise reversals. Rankings remain stable, with correlations of at least 0.997 for breadth and 0.976 for depth. Depth is most sensitive to α, which balances direct relation coverage against descendant evidence; other perturbations cause no practical reversals. Paired values report breadth/depth.</p>
+                </article>
+                <article class="validation-slide carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="3 of 5: Table 4, Research Task Quality">
+                  <h3 class="validation-slide-title">Research Task Quality</h3>
+                  <figure class="validation-image-frame">
+                    <div class="figure-scroll" tabindex="0" role="region" aria-label="Original Table 4; scroll horizontally on small screens">
+                      <button class="figure-trigger validation-table-quality" type="button" data-zoom="assets/images/validation-quality.webp" data-title="Research-task quality" disabled aria-label="Enlarge original paper Table 4"><img src="assets/images/validation-quality.webp" alt="Original Table 4: Poor, Medium and Good counts for research value, public answerability and query–domain match. All 144 are Good on the first two criteria; domain match has 141 Good and three Medium." width="2200" height="729" loading="lazy"></button>
+                    </div>
+                  </figure>
+                  <p class="validation-slide-analysis">To assess the quality of the generated research tasks, we manually review all 144 queries for research value, public answerability, and alignment with their assigned domains. All are rated Good on the first two criteria; domain alignment is rated Good for 141 queries and Medium for three. These Medium cases reflect natural cross-domain overlap and remain coherent, publicly answerable, and sufficiently aligned for evaluation.</p>
+                </article>
+                <article class="validation-slide carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="4 of 5: Table 5, Lexical Leakage">
+                  <h3 class="validation-slide-title">Lexical Leakage by Hop Distance</h3>
+                  <figure class="validation-image-frame">
+                    <div class="figure-scroll" tabindex="0" role="region" aria-label="Original Table 5; scroll horizontally on small screens">
+                      <button class="figure-trigger validation-table-leakage" type="button" data-zoom="assets/images/validation-leakage.webp" data-title="Lexical leakage by hop distance" disabled aria-label="Enlarge original paper Table 5"><img src="assets/images/validation-leakage.webp" alt="Original Table 5: inspected entities, generic-term matches and confirmed leaks for hops 1, 2 and 3, plus totals. 7,385 entities, 34 generic-term matches, eight confirmed leaks (0.108%), and no first-hop leaks." width="2200" height="902" loading="lazy"></button>
+                    </div>
+                  </figure>
+                  <p class="validation-slide-analysis">To check whether queries reveal hidden entities used for evaluation, we sample 24 cases, one per domain, and compare each query with every non-root entity title in its subgraph. We manually review literal matches from 7,385 query–entity comparisons, excluding generic-term overlaps that do not unambiguously identify entities. Eight leaks are confirmed (0.108%), with none at the first hop. This low lexical leakage rate is unlikely to materially affect report generation or benchmark evaluation.</p>
+                </article>
+                <article class="validation-slide carousel-slide" data-carousel-slide role="group" aria-roledescription="slide" aria-label="5 of 5: Table 6, Human–LLM Agreement">
+                  <h3 class="validation-slide-title">Human–LLM Agreement</h3>
+                  <figure class="validation-image-frame">
+                    <div class="figure-scroll" tabindex="0" role="region" aria-label="Original Table 6; scroll horizontally on small screens">
+                      <button class="figure-trigger validation-table-agreement" type="button" data-zoom="assets/images/validation-agreement.webp" data-title="Human–LLM agreement" disabled aria-label="Enlarge original paper Table 6"><img src="assets/images/validation-agreement.webp" alt="Original Table 6: binary and ternary Macro-F1 for Gemini 2.5 Pro (0.893, 0.806), Qwen3.8 Max (0.840, 0.718), and DeepSeek V4 Pro (0.865, 0.630)." width="2200" height="1066" loading="lazy"></button>
+                    </div>
+                  </figure>
+                  <p class="validation-slide-analysis">To assess the reliability of LLM-based rubric scoring, we compare three judges with human-reviewed labels on 3,695 judgments from 12 reports, each representing a different domain. Macro-F1 is computed per report and averaged across the 12 reports under binary and ternary scoring. Binary scoring yields higher agreement for all three judges. Gemini 2.5 Pro achieves the highest binary Macro-F1 (0.893), supporting its use as the formal judge with ternary outputs converted to binary coverage scores.</p>
+                </article>
+              </div>
+              <button class="carousel-arrow carousel-next js-only" data-carousel-next type="button" aria-label="Next statistics or validation table"><img class="icon-image" src="assets/icons/chevron-down.svg" alt=""></button>
+              <div class="carousel-pagination js-only" role="group" aria-label="Choose statistics or validation">
+                <button type="button" data-carousel-go="0" aria-label="Show Table 7: Benchmark Statistics" aria-current="true"><span></span></button>
+                <button type="button" data-carousel-go="1" aria-label="Show Table 3: Metric Sensitivity"><span></span></button>
+                <button type="button" data-carousel-go="2" aria-label="Show Table 4: Research Task Quality"><span></span></button>
+                <button type="button" data-carousel-go="3" aria-label="Show Table 5: Lexical Leakage"><span></span></button>
+                <button type="button" data-carousel-go="4" aria-label="Show Table 6: Human–LLM Agreement"><span></span></button>
+              </div>
+              <p id="validation-slide-status" data-carousel-status class="sr-only" role="status" aria-live="polite">Benchmark Statistics, 1 of 5.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section id="local-framework" class="section section-muted">
+      <div class="container is-max-desktop">
+        <h2 class="section-title framework-heading">Local Research Framework</h2>
+        <figure class="paper-figure"><div class="figure-scroll" tabindex="0" role="region" aria-label="Local research framework; scroll horizontally on small screens"><button class="figure-trigger wide-diagram" type="button" data-zoom="assets/images/research-framework.webp" data-title="The shared local research framework" disabled aria-label="Enlarge the local research framework"><img src="assets/images/research-framework.webp" alt="A planner creates three Research Units which collect evidence from fixed Wikipedia through Search and Open. One coverage-gap check may invoke one additional Gap Unit before final report synthesis." width="2200" height="734" loading="lazy"></button></div></figure>
+        <div class="reading-width content framework-analysis">
+          <p>The local research framework standardizes the evidence corpus, tool interface, workflow, and interaction budget across backbone LLMs. All retrieval runs locally over the fixed English Wikipedia snapshot <a href="https://dumps.wikimedia.org/enwiki/20260701/" target="_blank" rel="noopener noreferrer" aria-label="Get the July 1, 2026 English Wikipedia dump used for enwiki-20260701-v1"><code>enwiki-20260701-v1</code></a>. Provider-native web search is disabled: Search identifies pages in the offline corpus, and Open reads their contents. Every backbone therefore searches the same time-invariant evidence space, avoiding changes in external web content and search results.</p>
+          <p>The backbone decomposes each query into three Research Units that collect evidence concurrently through these local tools. Their notes undergo one coverage-gap check; at most one Gap Unit gathers supplemental evidence before final report synthesis. The shared setting leaves planning, tool-use choices, evidence selection, and report generation to each backbone, enabling controlled comparison of their research behavior.</p>
+        </div>
+        <div class="reading-width content">
+          <p>Download the <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime" target="_blank" rel="noopener noreferrer">DRBenchPro Local Research Framework — Docker Image</a> to run the framework with its fixed Wikipedia index on your own machine. The image includes the application and benchmark; model API access is supplied by the user. To evaluate reports from your own research system, use the <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro" target="_blank" rel="noopener noreferrer">benchmark dataset</a> and Python evaluator without downloading the image.</p>
+        </div>
+        <div class="reading-width documentation-links"><a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime" target="_blank" rel="noopener noreferrer">Framework Image</a><a href="https://github.com/ZJU-REAL/DRBenchPro/blob/main/docker/README.md#download-the-framework-image" target="_blank" rel="noopener noreferrer">Download and run</a><a href="https://github.com/ZJU-REAL/DRBenchPro/blob/main/src/drbenchpro/local_research/README.md" target="_blank" rel="noopener noreferrer">Framework documentation</a><a href="https://github.com/ZJU-REAL/DRBenchPro/blob/main/src/drbenchpro/evaluation/README.md" target="_blank" rel="noopener noreferrer">Evaluation guide</a></div>
+      </div>
+    </section>
+
+    <section id="bibtex" class="section bibtex-placeholder">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">BibTeX</h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page-footer">
+    <div class="container is-max-desktop reading-width has-text-centered">
+      <p>Contact: <a href="mailto:syl@zju.edu.cn">Yongliang Shen</a> · Zhejiang University</p>
+      <p>&copy; 2026 REAL Lab. Original website code: <a href="https://github.com/ZJU-REAL/DRBenchPro/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>. Benchmark data: <a href="https://github.com/ZJU-REAL/DRBenchPro/blob/main/DATA_LICENSE" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</p>
+    </div>
+  </footer>
+
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="dialog-header"><h2 id="figure-dialog-title">Figure</h2><div class="dialog-actions"><button class="dialog-close" type="button" autofocus aria-label="Close figure"><img class="icon-image" src="assets/icons/x.svg" alt=""></button></div></div>
+    <div class="dialog-image-scroll"><img id="figure-dialog-image" alt=""></div>
+  </dialog>
+</body>
+</html>

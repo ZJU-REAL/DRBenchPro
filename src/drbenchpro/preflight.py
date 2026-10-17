@@ -21,45 +21,86 @@ def _endpoint(value):
 
 
 def _research_probe(engine, max_tokens):
-    from drbenchpro.local_research.wiki_client import wikipedia_tool_schemas
+    import json
+    from drbenchpro.local_research.model_client import ModelClientError, _is_unrequested_local_tool_response
+    from drbenchpro.local_research.wiki_client import WikiToolClient, wikipedia_tool_schemas
     from drbenchpro.local_research.schemas import TokenUsage
     tools = wikipedia_tool_schemas()
     messages = [{"role": "system", "content": "This is a synthetic API compatibility test, not a benchmark run."}]
     usage = TokenUsage()
+    repairs = corrections = invalid_calls = 0
+    modes = set()
     source_id = f"{engine.config.snapshot_id}:p:1:r:1:s:0"
+
+    def synthetic_transport(url, payload, timeout):
+        # Reuse the real Wiki client's argument handling without network I/O.
+        result = ({"results": [{"source_id": source_id, "title": "Synthetic archive"}]}
+                  if url.endswith("/search") else
+                  {"source_id": source_id, "content": "The archive stores research notes."})
+        return {"snapshot_id": engine.config.snapshot_id, **result}
+
+    synthetic_wiki = WikiToolClient(
+        {"base_url": "http://synthetic.invalid", "max_retries": 0},
+        snapshot_id=engine.config.snapshot_id, transport=synthetic_transport,
+    )
     for name, instruction in (
         ("search", "Call search with query 'synthetic archive'."),
         ("open", f"Call open with source_id '{source_id}'."),
     ):
         messages.append({"role": "user", "content": instruction})
-        response = engine.model.chat(messages, tools=tools,
-                    tool_choice={"type": "function", "function": {"name": name}},
-                    purpose="preflight", max_tokens=max_tokens)
-        usage.add(response.usage)
-        if response.finish_reason.lower() in {"length", "max_tokens", "max_output_tokens", "error"}:
-            raise PreflightError("Synthetic probe was incomplete; inspect provider support or explicitly increase --probe-max-tokens")
-        if len(response.tool_calls) != 1 or response.tool_calls[0].name != name:
-            raise PreflightError(f"Model did not return the requested {name} tool call")
-        call = response.tool_calls[0]
-        field = "query" if name == "search" else "source_id"
-        if call.parse_error or not isinstance(call.arguments.get(field), str) or not call.arguments[field].strip():
-            raise PreflightError(f"Invalid {name} tool arguments")
-        if name == "open" and call.arguments[field] != source_id:
-            raise PreflightError("Model did not preserve the returned source_id")
-        messages.append({"role": "assistant", "content": response.content or None,
-                         "tool_calls": [call.to_openai_dict()]})
-        result = ({"results": [{"source_id": source_id, "title": "Synthetic archive"}]}
-                  if name == "search" else {"source_id": source_id, "content": "The archive stores research notes."})
-        import json
-        messages.append({"role": "tool", "tool_call_id": call.id,
-                         "content": json.dumps({"snapshot_id": engine.config.snapshot_id, **result})})
+        for correction in range(2):
+            valid = False
+            try:
+                response = engine.model.chat(messages, tools=tools,
+                            tool_choice={"type": "function", "function": {"name": name}},
+                            purpose="preflight", max_tokens=max_tokens)
+            except ModelClientError as exc:
+                # Authentication, network and remote-search policy errors stay terminal.
+                if not _is_unrequested_local_tool_response(exc):
+                    raise
+                for route in exc.usage_by_route:
+                    usage.add(TokenUsage(**{k: route.get(k, 0) for k in usage.to_dict()}))
+                repairs += sum(bool(a.get("compatibility_fallback")) for a in exc.attempts)
+                invalid_calls += 1
+            else:
+                usage.add(response.usage)
+                repairs += response.route.get("thinking_tool_choice_repairs", 0)
+                modes.add(response.route.get("tool_choice_mode", "specific"))
+                if response.finish_reason.lower() in {"length", "max_tokens", "max_output_tokens", "error"}:
+                    raise PreflightError("Synthetic probe was incomplete; inspect provider support or explicitly increase --probe-max-tokens")
+                messages.append({"role": "assistant", "content": response.content or None,
+                                 **({"tool_calls": [c.to_openai_dict() for c in response.tool_calls]}
+                                    if response.tool_calls else {})})
+                for call in response.tool_calls:
+                    try:
+                        if call.name != name or call.parse_error:
+                            raise ValueError("Call the requested local tool with JSON object arguments.")
+                        if name == "open" and str(call.arguments.get("source_id") or "").strip() != source_id:
+                            raise ValueError("Preserve the synthetic source_id returned by search.")
+                        result = synthetic_wiki.execute(call.name, call.arguments)
+                        valid = True
+                    except (ValueError, RuntimeError):
+                        invalid_calls += 1
+                        result = {"error": "invalid_probe_tool_call",
+                                  "message": "Use the requested tool and its declared arguments; preserve returned source IDs."}
+                    messages.append({"role": "tool", "tool_call_id": call.id,
+                                     "content": json.dumps(result)})
+            if valid:
+                break
+            if correction:
+                raise PreflightError(f"Model did not complete a valid {name} call after one correction")
+            corrections += 1
+            messages.append({"role": "user", "content": instruction +
+                             " Return a valid tool call, not only text. Use the declared arguments and preserve source IDs."})
     messages.append({"role": "user", "content": "Summarize the synthetic evidence in one sentence. Do not call tools."})
     response = engine.model.chat(messages, tools=None, purpose="preflight", max_tokens=max_tokens)
     usage.add(response.usage)
     if (response.tool_calls or not response.content.strip()
             or response.finish_reason.lower() in {"length", "max_tokens", "max_output_tokens", "error"}):
         raise PreflightError("Model failed the visible-text synthetic probe")
-    return {"synthetic_probe": "search/open and visible text passed", "usage": usage.to_dict()}
+    return {"synthetic_probe": "search/open and visible text passed", "usage": usage.to_dict(),
+            "thinking_tool_choice_repairs": repairs, "tool_choice_modes": sorted(modes),
+            "tool_corrections": corrections, "invalid_tool_calls": invalid_calls}
 
 
 def preflight(stage, config, output, *, queries=None, cases=None, reports=None,
@@ -100,7 +141,7 @@ def preflight(stage, config, output, *, queries=None, cases=None, reports=None,
                           snapshot_id=manifest["snapshot_id"], index_id=manifest["index_id"])
         if probe_model:
             progress("model_probe_started", stage=stage,
-                     note="External calls may incur charges; synthetic data only; up to 3 requests per route, no retries or fallback")
+                     note="External calls may incur charges; synthetic data only; 3 base calls per route, up to 1 correction per tool step and 1 thinking/tool-choice repair per call; no network retries or route fallback")
             probes = []
             for route in routes:
                 # Each route is tested explicitly, rather than hidden by a fallback.

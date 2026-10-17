@@ -1,0 +1,98 @@
+{
+  "main-results": {
+    "table": 2,
+    "page": 7,
+    "bounds_pt": [
+      68,
+      100,
+      544,
+      348
+    ],
+    "width": 2199,
+    "height": 1145,
+    "text": "Deep Research Agent Overall Coverage Breadth Depth\n(1) Deep Research Systems\no3 Deep Research 49.45 45.77 54.32\nPerplexity Sonar Deep Research 46.06 40.00 54.08\nQwen Deep Research 35.16 29.33 43.37\n(2) Native Search LLMs\nClaude Opus 5 57.04 53.09 61.91\nGrok 4.5 50.98 49.06 53.69\nGPT-5.6 Sol 47.80 43.13 53.96\nGemini 3.1 Pro Preview 45.50 42.65 49.44\nSonar Reasoning Pro 44.76 40.86 50.24\nQwen3.8 Max 36.53 31.08 44.09\n(3) Ours: Backbone LLMs under the local research framework\nQwen3.8 Max 47.94 46.62 50.37\nMiniMax M3 45.34 44.34 47.55\nGLM 5.2 45.34 44.61 47.09\nDeepSeek V4 Flash 42.63 41.42 45.04\nDeepSeek V4 Pro 39.22 36.96 43.03\nQwen3.7 Plus 36.10 35.37 37.94\nGemma 4 31B 32.00 30.43 34.82"
+  },
+  "benchmark-statistics": {
+    "table": 7,
+    "page": 15,
+    "bounds_pt": [
+      70,
+      214,
+      542,
+      493
+    ],
+    "width": 2199,
+    "height": 1300,
+    "text": "Panel A. Benchmark composition\nStatistic Value\nDomains 24\nRoot entities 48\nCases 144\nCases per domain 6\nCases per root 3\nTotal rubrics 44,102\nPanel B. Graph and case structure\nGraph scope Statistic Mean / value Observed range\nComplete local graph Edges 1,528.6 1,365\u20131,550\nSampled case subgraph Edges/rubrics 306.3 236\u2013310\nSampled case subgraph Root children 10 fixed\nSampled case subgraph Maximum hop distance 3 fixed\nPanel C. Rubric distribution by hop distance\nRubric hop distance \u03b4(r ) Rubrics Raw share Mean/case\ne\n\u03b4=1: root \u2192 first hop 1,440 3.27% 10.0\n\u03b4=2: first \u2192 second hop 7,184 16.29% 49.9\n\u03b4=3: second \u2192 third hop 35,478 80.45% 246.4"
+  },
+  "validation-sensitivity": {
+    "table": 3,
+    "page": 9,
+    "bounds_pt": [
+      295,
+      144,
+      523,
+      272
+    ],
+    "width": 2200,
+    "height": 1235,
+    "text": "Parameterconfiguration Rankingstability\nVariant \u03b1 \u03b7 \u03c1 \u03b2 Spearmanrs Exact Practical\nDefault 0.25 0.75 0.50 0.60 1.000/1.000 0/0 0/0\n\u03b1-Low 0.10 0.75 0.50 0.60 1.000/0.979 0/5 0/2\n\u03b1-High 0.40 0.75 0.50 0.60 1.000/0.976 0/6 0/1\n\u03b7-Low 0.25 0.50 0.50 0.60 1.000/0.997 0/1 0/0\n\u03b7-High 0.25 0.90 0.50 0.60 1.000/1.000 0/0 0/0\n\u03c1-Low 0.25 0.75 0.40 0.60 1.000/0.994 0/2 0/0\n\u03c1-High 0.25 0.75 0.60 0.60 1.000/0.985 0/4 0/0\n\u03b2-Low 0.25 0.75 0.50 0.50 1.000/1.000 0/0 0/0\n\u03b2-High 0.25 0.75 0.50 0.75 0.997/1.000 1/0 0/0"
+  },
+  "validation-quality": {
+    "table": 4,
+    "page": 9,
+    "bounds_pt": [
+      80,
+      605,
+      270,
+      668
+    ],
+    "width": 2200,
+    "height": 729,
+    "text": "Criterion Poor Medium Good\nResearch value 0 0 144\nPublic answerability 0 0 144\nQuery\u2013domain match 0 3 141"
+  },
+  "validation-leakage": {
+    "table": 5,
+    "page": 9,
+    "bounds_pt": [
+      303,
+      583,
+      520,
+      672
+    ],
+    "width": 2200,
+    "height": 902,
+    "text": "Hop Inspected Generic-term Confirmed leaks,\ndistance entities matches n (%)\nh(v)=1 240 3 0 (0%)\nh(v)=2 1,200 9 5 (0.417%)\nh(v)=3 5,945 22 3 (0.050%)\nTotal 7,385 34 8 (0.108%)"
+  },
+  "validation-agreement": {
+    "table": 6,
+    "page": 10,
+    "bounds_pt": [
+      365,
+      185,
+      528,
+      264
+    ],
+    "width": 2200,
+    "height": 1066,
+    "text": "Macro-F1\nJudge\nBinary Ternary\nGemini 2.5 Pro 0.893 0.806\nQwen3.8 Max 0.840 0.718\nDeepSeek V4 Pro 0.865 0.630"
+  },
+  "provenance": {
+    "source": "arxiv/.build/arxiv.pdf",
+    "source_sha256": "7e2eb0b9dca07992e95ae2d319dff3f60243c41b332d1744f74b95323e459c25",
+    "export": "Original PDF table bodies, rendered without reconstructing rows or changing values."
+  },
+  "research-activity": {
+    "table": 13,
+    "page": 26,
+    "bounds_pt": [
+      123,
+      193,
+      489,
+      245
+    ],
+    "width": 2199,
+    "height": 312,
+    "text": "breadth depth overall\nAgent Search Open Pages Tokens(k) Words (%) (%) coverage(%)\nGLM5.2 12 34 112 302.9 2,214 26.40 32.28 29.19\nDeepSeekV4Flash 9 28 43 150.4 1,372 45.42 45.65 45.54"
+  }
+}

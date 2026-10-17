@@ -1,0 +1,2460 @@
+{
+  "snapshot": "2026-10-14",
+  "baseline_id": "1.1-beta0.60",
+  "aggregation": "Mean of case-level scores over six cases per system–domain cell; percentages",
+  "provenance": {
+    "source": "analysis/domain_coverage_heatmaps/domain_scheme3_3_final_v3_metrics.csv",
+    "source_sha256": "9528ff6ff4c24d85288ec27d1ad560f30d7a88940284e70510dc8e6127d11786",
+    "global_validation_max_abs_error": 1.3500311979441904e-13
+  },
+  "domains": [
+    {
+      "name": "Adult",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 48.939090275688,
+          "breadth_percent": 42.728,
+          "depth_percent": 56.440989228324
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 38.229131090038,
+          "breadth_percent": 29.882666666667,
+          "depth_percent": 49.57485804302
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 35.435946378919,
+          "breadth_percent": 30.778666666667,
+          "depth_percent": 44.16830349075
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 63.647297612551,
+          "breadth_percent": 59.190222222222,
+          "depth_percent": 68.656510486258
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 55.805346201798,
+          "breadth_percent": 51.112,
+          "depth_percent": 61.04699905978
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 46.335617637177,
+          "breadth_percent": 41.789333333333,
+          "depth_percent": 52.422681889215
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 50.840447350288,
+          "breadth_percent": 48.512,
+          "depth_percent": 53.36948417409
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 35.760987537368,
+          "breadth_percent": 28.765333333333,
+          "depth_percent": 45.682927763758
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 40.793085690852,
+          "breadth_percent": 31.957333333333,
+          "depth_percent": 53.434499403081
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 49.439653280339,
+          "breadth_percent": 47.181333333333,
+          "depth_percent": 52.445498674435
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 52.771698782199,
+          "breadth_percent": 50.570666666667,
+          "depth_percent": 55.36214902372
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 39.9593008065,
+          "breadth_percent": 40.152,
+          "depth_percent": 41.157265566273
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 50.555870227365,
+          "breadth_percent": 47.16,
+          "depth_percent": 55.458513756951
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 43.066977399651,
+          "breadth_percent": 41.178666666667,
+          "depth_percent": 46.078750988791
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 32.73873016114,
+          "breadth_percent": 28.872,
+          "depth_percent": 38.928525291856
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 29.059959417276,
+          "breadth_percent": 27.557333333333,
+          "depth_percent": 32.238059830286
+        }
+      ]
+    },
+    {
+      "name": "Art & Design",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 50.261723896115,
+          "breadth_percent": 47.634666666667,
+          "depth_percent": 53.847352464594
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 48.857533362885,
+          "breadth_percent": 44.901333333333,
+          "depth_percent": 53.509546642959
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 35.14620425233,
+          "breadth_percent": 29.906666666667,
+          "depth_percent": 41.941739573575
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 58.900292747687,
+          "breadth_percent": 60.421333333333,
+          "depth_percent": 57.892470532928
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 57.3904725036,
+          "breadth_percent": 56.824,
+          "depth_percent": 58.272886971152
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 49.919721849794,
+          "breadth_percent": 46.253333333333,
+          "depth_percent": 54.936474102917
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 47.125168194663,
+          "breadth_percent": 44.613333333333,
+          "depth_percent": 50.707818339821
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 41.418588033091,
+          "breadth_percent": 38.386666666667,
+          "depth_percent": 45.695135708059
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 31.119053400746,
+          "breadth_percent": 27.618666666667,
+          "depth_percent": 36.651487687455
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 47.910198551938,
+          "breadth_percent": 50.248,
+          "depth_percent": 46.051358979341
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 45.79759323558,
+          "breadth_percent": 46.373333333333,
+          "depth_percent": 46.493458298198
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 41.141259006395,
+          "breadth_percent": 39.354666666667,
+          "depth_percent": 43.694921420577
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 43.074380271977,
+          "breadth_percent": 43.832,
+          "depth_percent": 42.670253439026
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 38.221047224579,
+          "breadth_percent": 39.288,
+          "depth_percent": 37.811924759325
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 32.186767120968,
+          "breadth_percent": 32.477333333333,
+          "depth_percent": 33.264003534387
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 32.906608749187,
+          "breadth_percent": 30.488,
+          "depth_percent": 36.489564165708
+        }
+      ]
+    },
+    {
+      "name": "Crime & Law",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 48.063656963701,
+          "breadth_percent": 43.987111111111,
+          "depth_percent": 52.903412048624
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 40.075815699288,
+          "breadth_percent": 31.525777777778,
+          "depth_percent": 52.109447379999
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 22.14504305552,
+          "breadth_percent": 15.732,
+          "depth_percent": 33.104984930368
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 57.269786460629,
+          "breadth_percent": 53.081333333333,
+          "depth_percent": 62.395499614123
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 46.321502279427,
+          "breadth_percent": 40.862666666667,
+          "depth_percent": 53.133925607659
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 38.189583027767,
+          "breadth_percent": 29.548888888889,
+          "depth_percent": 50.780090232274
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 39.984731474414,
+          "breadth_percent": 38.548,
+          "depth_percent": 43.285174595134
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 39.973674166292,
+          "breadth_percent": 35.718666666667,
+          "depth_percent": 46.287988135526
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 27.885355596413,
+          "breadth_percent": 20.117777777778,
+          "depth_percent": 40.709468847497
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 45.056868901116,
+          "breadth_percent": 43.070666666667,
+          "depth_percent": 47.743840591135
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 39.475346483947,
+          "breadth_percent": 38.366666666667,
+          "depth_percent": 41.781530981373
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 47.815189735474,
+          "breadth_percent": 45.827111111111,
+          "depth_percent": 50.194224913603
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 41.596584648258,
+          "breadth_percent": 40.526666666667,
+          "depth_percent": 43.279431724516
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 42.303259511494,
+          "breadth_percent": 41.228,
+          "depth_percent": 44.908342937278
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 34.680931921356,
+          "breadth_percent": 29.844,
+          "depth_percent": 41.088668566095
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 25.219606397206,
+          "breadth_percent": 21.857333333333,
+          "depth_percent": 29.649033044689
+        }
+      ]
+    },
+    {
+      "name": "Education & Jobs",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 49.082201947193,
+          "breadth_percent": 43.765333333333,
+          "depth_percent": 56.434111452038
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 51.298049597531,
+          "breadth_percent": 41.821333333333,
+          "depth_percent": 63.431730957997
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 33.796257145821,
+          "breadth_percent": 25.461333333333,
+          "depth_percent": 46.59786961963
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 62.242264628005,
+          "breadth_percent": 57.621333333333,
+          "depth_percent": 67.585341918226
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 59.942827615328,
+          "breadth_percent": 59.178666666667,
+          "depth_percent": 61.582047693205
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 50.395731959899,
+          "breadth_percent": 43.112,
+          "depth_percent": 59.695368050618
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 51.006114927902,
+          "breadth_percent": 50.741333333333,
+          "depth_percent": 51.803435143622
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 52.268764514105,
+          "breadth_percent": 49.363555555556,
+          "depth_percent": 57.212039207441
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 40.501244761424,
+          "breadth_percent": 33.602666666667,
+          "depth_percent": 49.742007365115
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 53.208765756606,
+          "breadth_percent": 52.178666666667,
+          "depth_percent": 55.015340033886
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 49.418460423147,
+          "breadth_percent": 52.0,
+          "depth_percent": 47.203766628047
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 46.231674814346,
+          "breadth_percent": 49.92,
+          "depth_percent": 43.151859893283
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 52.085729422102,
+          "breadth_percent": 51.357333333333,
+          "depth_percent": 53.74088472927
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 46.739387153606,
+          "breadth_percent": 43.170666666667,
+          "depth_percent": 51.524528711641
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 44.082085140695,
+          "breadth_percent": 44.770666666667,
+          "depth_percent": 43.608011232462
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 38.662241794784,
+          "breadth_percent": 37.944,
+          "depth_percent": 40.24280772208
+        }
+      ]
+    },
+    {
+      "name": "Entertainment",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 47.049904631646,
+          "breadth_percent": 46.410666666667,
+          "depth_percent": 49.086633513138
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 45.767122877604,
+          "breadth_percent": 38.349333333333,
+          "depth_percent": 55.37832590617
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 23.876795280175,
+          "breadth_percent": 18.573333333333,
+          "depth_percent": 31.058800552943
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 49.025912186517,
+          "breadth_percent": 46.336,
+          "depth_percent": 53.966698640258
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 47.070573230278,
+          "breadth_percent": 47.621333333333,
+          "depth_percent": 48.42208717364
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 45.111855824951,
+          "breadth_percent": 40.090666666667,
+          "depth_percent": 51.313390695922
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 41.825074741738,
+          "breadth_percent": 41.933333333333,
+          "depth_percent": 42.336560869004
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 43.617781557088,
+          "breadth_percent": 41.136,
+          "depth_percent": 47.028103023454
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 35.931763828307,
+          "breadth_percent": 32.738666666667,
+          "depth_percent": 40.357081099335
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 43.745994723359,
+          "breadth_percent": 42.154666666667,
+          "depth_percent": 47.275277022516
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 40.152201569787,
+          "breadth_percent": 39.221333333333,
+          "depth_percent": 42.34304967706
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 36.754251892813,
+          "breadth_percent": 37.336,
+          "depth_percent": 38.254441548851
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 38.891718586872,
+          "breadth_percent": 36.162666666667,
+          "depth_percent": 43.232512259651
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 37.101209357377,
+          "breadth_percent": 32.8,
+          "depth_percent": 43.887042693729
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 32.099551658783,
+          "breadth_percent": 30.989333333333,
+          "depth_percent": 34.414090724302
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 29.70867124567,
+          "breadth_percent": 31.157333333333,
+          "depth_percent": 29.909802601219
+        }
+      ]
+    },
+    {
+      "name": "Fashion & Beauty",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 45.727905596663,
+          "breadth_percent": 44.378666666667,
+          "depth_percent": 48.609386130785
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 49.780751430079,
+          "breadth_percent": 45.104,
+          "depth_percent": 55.348015416492
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 28.782912612275,
+          "breadth_percent": 23.613333333333,
+          "depth_percent": 35.568127992014
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 56.851933614227,
+          "breadth_percent": 52.893333333333,
+          "depth_percent": 61.381220991086
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 50.592258559097,
+          "breadth_percent": 50.133333333333,
+          "depth_percent": 51.547175965624
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 46.350231839213,
+          "breadth_percent": 43.634666666667,
+          "depth_percent": 49.77168380797
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 44.711890435144,
+          "breadth_percent": 46.210666666667,
+          "depth_percent": 44.198291447251
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 42.206379169,
+          "breadth_percent": 39.189333333333,
+          "depth_percent": 47.037085635991
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 37.263260156801,
+          "breadth_percent": 34.821333333333,
+          "depth_percent": 40.668078946628
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 42.324968080217,
+          "breadth_percent": 43.434666666667,
+          "depth_percent": 42.29194448598
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 46.212054057113,
+          "breadth_percent": 49.194666666667,
+          "depth_percent": 44.345919247525
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 40.767839344683,
+          "breadth_percent": 41.538666666667,
+          "depth_percent": 41.933788558608
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 36.738142147438,
+          "breadth_percent": 36.176,
+          "depth_percent": 39.355858440062
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 42.874413723865,
+          "breadth_percent": 42.725333333333,
+          "depth_percent": 45.030643194728
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 38.454488745658,
+          "breadth_percent": 41.813333333333,
+          "depth_percent": 35.740083524649
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 26.069623582567,
+          "breadth_percent": 26.746666666667,
+          "depth_percent": 26.973623313122
+        }
+      ]
+    },
+    {
+      "name": "Finance & Business",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 40.651235796025,
+          "breadth_percent": 36.128,
+          "depth_percent": 46.69566667989
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 47.105580068923,
+          "breadth_percent": 40.36,
+          "depth_percent": 55.588546334074
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 35.831873107662,
+          "breadth_percent": 28.370666666667,
+          "depth_percent": 45.600651711977
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 56.323623285325,
+          "breadth_percent": 49.325333333333,
+          "depth_percent": 64.768563161744
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 47.957158349817,
+          "breadth_percent": 46.261333333333,
+          "depth_percent": 50.396304693744
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 50.589767847066,
+          "breadth_percent": 46.264,
+          "depth_percent": 56.152008826474
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 44.92311674852,
+          "breadth_percent": 39.92,
+          "depth_percent": 51.153812638825
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 42.877491873569,
+          "breadth_percent": 37.106666666667,
+          "depth_percent": 50.150492878162
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 31.593042137807,
+          "breadth_percent": 24.072,
+          "depth_percent": 42.101565146277
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 45.502293292545,
+          "breadth_percent": 45.488,
+          "depth_percent": 46.547428567166
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 46.220660111995,
+          "breadth_percent": 44.194666666667,
+          "depth_percent": 49.950840179852
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 45.490895027494,
+          "breadth_percent": 43.029333333333,
+          "depth_percent": 48.592805975908
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 44.050455138446,
+          "breadth_percent": 45.472,
+          "depth_percent": 43.380169727892
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 38.74445353378,
+          "breadth_percent": 32.901333333333,
+          "depth_percent": 46.008810877395
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 37.860479116013,
+          "breadth_percent": 40.085333333333,
+          "depth_percent": 36.16112282572
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 34.325410052116,
+          "breadth_percent": 34.648,
+          "depth_percent": 34.632879260871
+        }
+      ]
+    },
+    {
+      "name": "Food & Dining",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 37.52799880152,
+          "breadth_percent": 35.416,
+          "depth_percent": 40.599357340991
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 37.574498158818,
+          "breadth_percent": 33.146666666667,
+          "depth_percent": 43.375422853285
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 19.472607459702,
+          "breadth_percent": 13.648,
+          "depth_percent": 28.546398495376
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 47.183536009132,
+          "breadth_percent": 46.661333333333,
+          "depth_percent": 48.24621631711
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 36.422469243391,
+          "breadth_percent": 33.002666666667,
+          "depth_percent": 40.497066431493
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 34.896357203814,
+          "breadth_percent": 33.346666666667,
+          "depth_percent": 37.778204996492
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 35.574476346918,
+          "breadth_percent": 35.010666666667,
+          "depth_percent": 36.628011849555
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 31.529654908918,
+          "breadth_percent": 29.984,
+          "depth_percent": 34.610696098645
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 23.389514953012,
+          "breadth_percent": 21.498666666667,
+          "depth_percent": 26.990601866403
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 42.399310079531,
+          "breadth_percent": 44.32,
+          "depth_percent": 41.023070997308
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 39.655906842099,
+          "breadth_percent": 41.032,
+          "depth_percent": 39.272444833688
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 44.970190808321,
+          "breadth_percent": 49.042666666667,
+          "depth_percent": 41.340424994465
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 37.748406766975,
+          "breadth_percent": 43.568,
+          "depth_percent": 33.486590630212
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 36.990576893346,
+          "breadth_percent": 40.402666666667,
+          "depth_percent": 34.30965948295
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 32.260824482581,
+          "breadth_percent": 37.570666666667,
+          "depth_percent": 28.233282779119
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 29.617607377729,
+          "breadth_percent": 31.752,
+          "depth_percent": 28.670368211673
+        }
+      ]
+    },
+    {
+      "name": "Games",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 52.522489955279,
+          "breadth_percent": 52.770666666667,
+          "depth_percent": 53.91041172695
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 48.56533589215,
+          "breadth_percent": 45.253333333333,
+          "depth_percent": 52.638230260037
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 36.735769396517,
+          "breadth_percent": 30.146666666667,
+          "depth_percent": 45.41289162987
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 54.459492377642,
+          "breadth_percent": 52.645333333333,
+          "depth_percent": 57.103837712495
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 54.137903790867,
+          "breadth_percent": 54.042666666667,
+          "depth_percent": 55.469370113474
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 45.431089201578,
+          "breadth_percent": 41.416,
+          "depth_percent": 50.938151953559
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 48.689721605914,
+          "breadth_percent": 44.602666666667,
+          "depth_percent": 54.35832172892
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 48.35455406285,
+          "breadth_percent": 44.661333333333,
+          "depth_percent": 53.787628729306
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 39.437305735649,
+          "breadth_percent": 32.28,
+          "depth_percent": 48.723294168227
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 46.962240286059,
+          "breadth_percent": 43.288,
+          "depth_percent": 51.489141185274
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 50.066750768717,
+          "breadth_percent": 50.072,
+          "depth_percent": 50.951235526695
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 50.878316586534,
+          "breadth_percent": 48.066666666667,
+          "depth_percent": 54.497354295532
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 42.043245654859,
+          "breadth_percent": 42.192,
+          "depth_percent": 43.382182911319
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 44.072038923857,
+          "breadth_percent": 44.197333333333,
+          "depth_percent": 46.056241478936
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 40.157915491034,
+          "breadth_percent": 41.997333333333,
+          "depth_percent": 38.900463634024
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 34.872143550367,
+          "breadth_percent": 31.501333333333,
+          "depth_percent": 38.937145955205
+        }
+      ]
+    },
+    {
+      "name": "Hardware",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 54.416252116111,
+          "breadth_percent": 48.544,
+          "depth_percent": 61.711389430541
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 52.730441553624,
+          "breadth_percent": 44.56,
+          "depth_percent": 62.692708275057
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 44.046759612143,
+          "breadth_percent": 35.226666666667,
+          "depth_percent": 55.514804484712
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 60.036942781075,
+          "breadth_percent": 55.269333333333,
+          "depth_percent": 65.61476984948
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 50.627864715667,
+          "breadth_percent": 50.498666666667,
+          "depth_percent": 51.161399161634
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 47.272839223633,
+          "breadth_percent": 40.138666666667,
+          "depth_percent": 55.842094071866
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 50.259344873751,
+          "breadth_percent": 45.141333333333,
+          "depth_percent": 56.094310989455
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 46.571988220193,
+          "breadth_percent": 38.608,
+          "depth_percent": 56.727380888201
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 42.642225348185,
+          "breadth_percent": 35.397333333333,
+          "depth_percent": 51.916662936979
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 53.248457472836,
+          "breadth_percent": 52.024,
+          "depth_percent": 55.842713920447
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 46.721631086123,
+          "breadth_percent": 44.813333333333,
+          "depth_percent": 49.083217458734
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 50.741895607976,
+          "breadth_percent": 49.304,
+          "depth_percent": 52.605545697314
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 44.541599920897,
+          "breadth_percent": 42.402666666667,
+          "depth_percent": 48.500386022624
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 34.837414822661,
+          "breadth_percent": 31.125333333333,
+          "depth_percent": 39.207922304852
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 39.340789013472,
+          "breadth_percent": 36.453333333333,
+          "depth_percent": 43.584552347686
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 39.372717620702,
+          "breadth_percent": 37.952,
+          "depth_percent": 41.266191504519
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 53.404841647078,
+          "breadth_percent": 50.145777777778,
+          "depth_percent": 58.335453079252
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 54.341984408643,
+          "breadth_percent": 46.394666666667,
+          "depth_percent": 64.875670877484
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 51.711312491242,
+          "breadth_percent": 45.290666666667,
+          "depth_percent": 60.26544692333
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 60.485499481689,
+          "breadth_percent": 55.884444444444,
+          "depth_percent": 66.682376823569
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 57.941040139249,
+          "breadth_percent": 55.115555555556,
+          "depth_percent": 61.641525002733
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 53.76190543229,
+          "breadth_percent": 45.353777777778,
+          "depth_percent": 64.593952951595
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 53.356047475973,
+          "breadth_percent": 49.919111111111,
+          "depth_percent": 58.279807932492
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 53.413935012806,
+          "breadth_percent": 47.376,
+          "depth_percent": 61.567815545947
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 46.386148251138,
+          "breadth_percent": 41.168,
+          "depth_percent": 53.82078903906
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 51.584033458561,
+          "breadth_percent": 51.506666666667,
+          "depth_percent": 52.793226311655
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 40.713421653315,
+          "breadth_percent": 42.362666666667,
+          "depth_percent": 40.376292378995
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 51.583789618911,
+          "breadth_percent": 51.097777777778,
+          "depth_percent": 53.456117663009
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 47.524079971599,
+          "breadth_percent": 43.744,
+          "depth_percent": 52.599638593311
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 44.419577945612,
+          "breadth_percent": 39.512,
+          "depth_percent": 51.051165713732
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 42.038015418114,
+          "breadth_percent": 39.04,
+          "depth_percent": 47.250487317538
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 38.893553086098,
+          "breadth_percent": 36.410666666667,
+          "depth_percent": 43.094916470265
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 51.245110318013,
+          "breadth_percent": 48.669333333333,
+          "depth_percent": 54.468174579198
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 51.101897300914,
+          "breadth_percent": 47.248,
+          "depth_percent": 55.996949624471
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 38.307406429411,
+          "breadth_percent": 36.045333333333,
+          "depth_percent": 41.515995780707
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 55.83337238357,
+          "breadth_percent": 51.674666666667,
+          "depth_percent": 60.47042714073
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 48.944514282752,
+          "breadth_percent": 49.48,
+          "depth_percent": 48.874378286575
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 43.949990553943,
+          "breadth_percent": 39.488,
+          "depth_percent": 49.674077046522
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 44.645589952248,
+          "breadth_percent": 46.373333333333,
+          "depth_percent": 43.106335246663
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 46.131208202368,
+          "breadth_percent": 42.770666666667,
+          "depth_percent": 51.469017827566
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 34.820132719979,
+          "breadth_percent": 31.778666666667,
+          "depth_percent": 39.653873161476
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 45.810356862237,
+          "breadth_percent": 42.776,
+          "depth_percent": 49.393107843227
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 44.423018990185,
+          "breadth_percent": 41.994666666667,
+          "depth_percent": 48.311498557798
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 42.686192084018,
+          "breadth_percent": 44.832,
+          "depth_percent": 41.412043465096
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 38.161376708115,
+          "breadth_percent": 38.109333333333,
+          "depth_percent": 38.888416320569
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 39.779677941572,
+          "breadth_percent": 38.210666666667,
+          "depth_percent": 42.422470822827
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 32.834211132276,
+          "breadth_percent": 31.368,
+          "depth_percent": 34.787775712887
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 30.180850060435,
+          "breadth_percent": 28.552,
+          "depth_percent": 33.065194253976
+        }
+      ]
+    },
+    {
+      "name": "Home & Hobbies",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 56.761503628845,
+          "breadth_percent": 51.795555555556,
+          "depth_percent": 63.24118765737
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 45.238942630803,
+          "breadth_percent": 40.482666666667,
+          "depth_percent": 51.793783367077
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 34.445477385856,
+          "breadth_percent": 27.758666666667,
+          "depth_percent": 44.607627704368
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 61.724911631552,
+          "breadth_percent": 57.030222222222,
+          "depth_percent": 67.106454063841
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 54.456634984159,
+          "breadth_percent": 49.437333333333,
+          "depth_percent": 60.323748957565
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 52.25746728702,
+          "breadth_percent": 48.294666666667,
+          "depth_percent": 58.383445010824
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 47.610269636602,
+          "breadth_percent": 43.948,
+          "depth_percent": 52.608731401152
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 46.209172172665,
+          "breadth_percent": 38.714666666667,
+          "depth_percent": 56.985250007471
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 42.003355002167,
+          "breadth_percent": 35.688,
+          "depth_percent": 50.414143012579
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 56.529329523594,
+          "breadth_percent": 54.605333333333,
+          "depth_percent": 60.589851119122
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 46.56144669609,
+          "breadth_percent": 43.119111111111,
+          "depth_percent": 51.354918189554
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 45.811708347028,
+          "breadth_percent": 42.224888888889,
+          "depth_percent": 52.360458113118
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 45.310378253388,
+          "breadth_percent": 41.88,
+          "depth_percent": 50.987555701909
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 36.827564645729,
+          "breadth_percent": 30.302666666667,
+          "depth_percent": 46.37568410092
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 39.82878136585,
+          "breadth_percent": 38.821333333333,
+          "depth_percent": 42.815558661368
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 37.357802348038,
+          "breadth_percent": 34.018666666667,
+          "depth_percent": 41.603718507817
+        }
+      ]
+    },
+    {
+      "name": "Industrial",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 31.998257539008,
+          "breadth_percent": 27.645333333333,
+          "depth_percent": 38.139209048628
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 28.585901634256,
+          "breadth_percent": 21.725333333333,
+          "depth_percent": 39.452800639065
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 14.31619836011,
+          "breadth_percent": 10.709333333333,
+          "depth_percent": 19.336597148688
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 45.16215153727,
+          "breadth_percent": 39.88,
+          "depth_percent": 51.727372835468
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 38.715044326609,
+          "breadth_percent": 35.258666666667,
+          "depth_percent": 43.250541906596
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 30.69552182182,
+          "breadth_percent": 25.912,
+          "depth_percent": 37.613666455431
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 26.436865332816,
+          "breadth_percent": 21.090666666667,
+          "depth_percent": 34.097139363831
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 26.182284818003,
+          "breadth_percent": 20.872,
+          "depth_percent": 33.528972379632
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 21.60607792329,
+          "breadth_percent": 17.418666666667,
+          "depth_percent": 27.232692471355
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 37.668656979188,
+          "breadth_percent": 31.429333333333,
+          "depth_percent": 46.526968266126
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 31.94432682225,
+          "breadth_percent": 29.458666666667,
+          "depth_percent": 36.293395334297
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 30.958484697794,
+          "breadth_percent": 27.394666666667,
+          "depth_percent": 36.024332309704
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 29.566978962498,
+          "breadth_percent": 26.498666666667,
+          "depth_percent": 33.488708711091
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 19.904151988162,
+          "breadth_percent": 16.221333333333,
+          "depth_percent": 26.471844760925
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 23.642626383505,
+          "breadth_percent": 19.885333333333,
+          "depth_percent": 28.981110490627
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 19.843283537687,
+          "breadth_percent": 17.416,
+          "depth_percent": 23.685107257327
+        }
+      ]
+    },
+    {
+      "name": "Literature",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 53.185086750803,
+          "breadth_percent": 51.074666666667,
+          "depth_percent": 55.718746323291
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 37.170230104472,
+          "breadth_percent": 32.317333333333,
+          "depth_percent": 43.952634328922
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 40.345472541915,
+          "breadth_percent": 34.434666666667,
+          "depth_percent": 47.769460575342
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 49.611333465179,
+          "breadth_percent": 46.136,
+          "depth_percent": 54.583512188787
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 47.31514765955,
+          "breadth_percent": 46.002666666667,
+          "depth_percent": 49.293297387625
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 47.239770965463,
+          "breadth_percent": 42.736,
+          "depth_percent": 53.058695274046
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 47.326399026182,
+          "breadth_percent": 43.810666666667,
+          "depth_percent": 51.312366727257
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 44.779098783606,
+          "breadth_percent": 40.213333333333,
+          "depth_percent": 49.987598790089
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 37.075015350766,
+          "breadth_percent": 30.456,
+          "depth_percent": 46.1797746523
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 44.561779399797,
+          "breadth_percent": 42.026666666667,
+          "depth_percent": 47.457604158296
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 47.441417851828,
+          "breadth_percent": 46.261333333333,
+          "depth_percent": 48.866768453221
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 42.565619127171,
+          "breadth_percent": 37.408,
+          "depth_percent": 48.656804017483
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 34.029219220819,
+          "breadth_percent": 32.522666666667,
+          "depth_percent": 36.813233201404
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 39.745932123826,
+          "breadth_percent": 39.864,
+          "depth_percent": 40.28033346116
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 31.133005319079,
+          "breadth_percent": 29.568,
+          "depth_percent": 33.899940630161
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 24.776588887834,
+          "breadth_percent": 22.949333333333,
+          "depth_percent": 27.932542843086
+        }
+      ]
+    },
+    {
+      "name": "Politics",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 50.53871547885,
+          "breadth_percent": 47.730666666667,
+          "depth_percent": 54.45751233594
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 52.083633427246,
+          "breadth_percent": 45.481777777778,
+          "depth_percent": 60.540967877076
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 42.553820106719,
+          "breadth_percent": 38.549333333333,
+          "depth_percent": 48.000396024967
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 56.200909575307,
+          "breadth_percent": 48.847111111111,
+          "depth_percent": 65.19909288195
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 54.3251439942,
+          "breadth_percent": 51.768,
+          "depth_percent": 58.594640303881
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 53.754927390093,
+          "breadth_percent": 47.263111111111,
+          "depth_percent": 62.604724893671
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 46.403444417457,
+          "breadth_percent": 41.465777777778,
+          "depth_percent": 52.57965630981
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 49.717099961593,
+          "breadth_percent": 43.108444444444,
+          "depth_percent": 58.847596044652
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 37.599392752977,
+          "breadth_percent": 32.909333333333,
+          "depth_percent": 44.340623515542
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 49.281982592288,
+          "breadth_percent": 48.878222222222,
+          "depth_percent": 51.765373564743
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 41.508554562717,
+          "breadth_percent": 39.984,
+          "depth_percent": 43.906309918696
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 51.142208604085,
+          "breadth_percent": 46.490666666667,
+          "depth_percent": 58.203641937823
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 41.188653367615,
+          "breadth_percent": 38.293333333333,
+          "depth_percent": 44.405943900758
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 35.039452110926,
+          "breadth_percent": 32.168,
+          "depth_percent": 38.836088385449
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 30.651585831722,
+          "breadth_percent": 28.984,
+          "depth_percent": 33.799985013439
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 32.723584831689,
+          "breadth_percent": 28.656,
+          "depth_percent": 37.850815224854
+        }
+      ]
+    },
+    {
+      "name": "Religion",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 52.416567632405,
+          "breadth_percent": 49.082666666667,
+          "depth_percent": 56.849744296037
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 42.517582440922,
+          "breadth_percent": 33.501333333333,
+          "depth_percent": 55.509672986113
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 43.31459201259,
+          "breadth_percent": 37.92,
+          "depth_percent": 50.560826281682
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 62.148875186954,
+          "breadth_percent": 58.104,
+          "depth_percent": 66.738899688029
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 58.408990903518,
+          "breadth_percent": 55.226666666667,
+          "depth_percent": 61.996583352236
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 45.686302207046,
+          "breadth_percent": 40.306666666667,
+          "depth_percent": 53.147881419004
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 47.268977159992,
+          "breadth_percent": 43.792,
+          "depth_percent": 51.227927456906
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 47.885978274677,
+          "breadth_percent": 46.733333333333,
+          "depth_percent": 49.784903006094
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 35.83597554321,
+          "breadth_percent": 31.290666666667,
+          "depth_percent": 41.697106000083
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 48.16533596469,
+          "breadth_percent": 43.589333333333,
+          "depth_percent": 53.905817430456
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 44.389465150529,
+          "breadth_percent": 40.170666666667,
+          "depth_percent": 50.735519743777
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 47.370141113826,
+          "breadth_percent": 46.066666666667,
+          "depth_percent": 49.339542330085
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 42.629238996974,
+          "breadth_percent": 39.936,
+          "depth_percent": 45.76057476514
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 37.434656382385,
+          "breadth_percent": 31.890666666667,
+          "depth_percent": 44.318270822081
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 36.152983492685,
+          "breadth_percent": 34.304,
+          "depth_percent": 38.371581275478
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 32.008729083697,
+          "breadth_percent": 25.914666666667,
+          "depth_percent": 40.032826333219
+        }
+      ]
+    },
+    {
+      "name": "Science & Technology",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 58.744945370628,
+          "breadth_percent": 54.008,
+          "depth_percent": 63.99770251269
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 57.862993656108,
+          "breadth_percent": 52.938666666667,
+          "depth_percent": 63.435926856087
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 45.63461328756,
+          "breadth_percent": 42.933333333333,
+          "depth_percent": 48.980545103955
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 62.411747559569,
+          "breadth_percent": 58.397333333333,
+          "depth_percent": 66.766871282392
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 58.951448080011,
+          "breadth_percent": 57.432,
+          "depth_percent": 60.680773021748
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 62.073719034456,
+          "breadth_percent": 58.888,
+          "depth_percent": 65.622538618368
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 53.718626006627,
+          "breadth_percent": 51.605333333333,
+          "depth_percent": 56.593243536028
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 54.511560506883,
+          "breadth_percent": 52.210666666667,
+          "depth_percent": 57.84868379339
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 50.606400638382,
+          "breadth_percent": 45.253333333333,
+          "depth_percent": 56.763181646955
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 53.90441613052,
+          "breadth_percent": 52.408,
+          "depth_percent": 55.82325597284
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 52.738889290378,
+          "breadth_percent": 49.848,
+          "depth_percent": 55.944230813896
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 51.860948052014,
+          "breadth_percent": 54.256,
+          "depth_percent": 49.961834810289
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 46.017700999539,
+          "breadth_percent": 44.776,
+          "depth_percent": 48.796158693443
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 47.368574919341,
+          "breadth_percent": 47.92,
+          "depth_percent": 47.418429198161
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 39.923803869588,
+          "breadth_percent": 41.04,
+          "depth_percent": 39.256405059626
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 41.356602899734,
+          "breadth_percent": 43.517333333333,
+          "depth_percent": 39.922554740788
+        }
+      ]
+    },
+    {
+      "name": "Social Life",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 47.244195614917,
+          "breadth_percent": 41.381333333333,
+          "depth_percent": 54.288337115575
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 41.023653371178,
+          "breadth_percent": 34.344,
+          "depth_percent": 49.64020067921
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 37.868335433352,
+          "breadth_percent": 29.101333333333,
+          "depth_percent": 49.866042774765
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 58.352360219813,
+          "breadth_percent": 53.650666666667,
+          "depth_percent": 64.170380672218
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 51.497469101246,
+          "breadth_percent": 46.621333333333,
+          "depth_percent": 57.859328235868
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 48.087382409774,
+          "breadth_percent": 41.541333333333,
+          "depth_percent": 56.089358558225
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 48.057043469525,
+          "breadth_percent": 47.045333333333,
+          "depth_percent": 50.838204813399
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 41.595078765697,
+          "breadth_percent": 37.6,
+          "depth_percent": 47.479074759545
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 39.549671833841,
+          "breadth_percent": 32.957333333333,
+          "depth_percent": 48.274252545257
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 48.173014255714,
+          "breadth_percent": 42.322666666667,
+          "depth_percent": 55.098327693029
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 44.527292409519,
+          "breadth_percent": 39.874666666667,
+          "depth_percent": 50.266876071649
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 47.820204287647,
+          "breadth_percent": 40.28,
+          "depth_percent": 57.385229896223
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 44.516488155877,
+          "breadth_percent": 37.362666666667,
+          "depth_percent": 53.627366613671
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 35.187317885301,
+          "breadth_percent": 28.685333333333,
+          "depth_percent": 44.216838164465
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 40.569575123429,
+          "breadth_percent": 35.509333333333,
+          "depth_percent": 46.759863920668
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 28.743020755991,
+          "breadth_percent": 22.245333333333,
+          "depth_percent": 37.383307412007
+        }
+      ]
+    },
+    {
+      "name": "Software",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 53.089496739372,
+          "breadth_percent": 49.172,
+          "depth_percent": 57.878545237206
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 53.080448951776,
+          "breadth_percent": 47.730666666667,
+          "depth_percent": 60.210382754062
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 43.840161230677,
+          "breadth_percent": 39.856,
+          "depth_percent": 48.793675060836
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 63.180070307125,
+          "breadth_percent": 58.936,
+          "depth_percent": 67.907507317816
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 55.193818330414,
+          "breadth_percent": 52.162666666667,
+          "depth_percent": 58.967460683163
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 54.366421913183,
+          "breadth_percent": 51.389333333333,
+          "depth_percent": 58.352262767313
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 49.051300796829,
+          "breadth_percent": 46.176,
+          "depth_percent": 52.791814964115
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 52.874313506447,
+          "breadth_percent": 48.442666666667,
+          "depth_percent": 58.547307182801
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 39.191924429386,
+          "breadth_percent": 35.333333333333,
+          "depth_percent": 44.239430320797
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 49.7210129421,
+          "breadth_percent": 50.853333333333,
+          "depth_percent": 49.139599309533
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 50.73173561858,
+          "breadth_percent": 53.256,
+          "depth_percent": 49.296441132482
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 47.631828255538,
+          "breadth_percent": 47.552,
+          "depth_percent": 48.390919703564
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 48.073641143328,
+          "breadth_percent": 48.405333333333,
+          "depth_percent": 48.807229083151
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 41.504567222649,
+          "breadth_percent": 39.186666666667,
+          "depth_percent": 45.766427831061
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 44.815938766207,
+          "breadth_percent": 45.432,
+          "depth_percent": 45.0984917145
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 30.674897021584,
+          "breadth_percent": 33.424,
+          "depth_percent": 29.100023937811
+        }
+      ]
+    },
+    {
+      "name": "Software Development",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 60.790703992252,
+          "breadth_percent": 54.368,
+          "depth_percent": 68.728838263471
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 55.891565288807,
+          "breadth_percent": 50.050666666667,
+          "depth_percent": 63.44390541988
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 49.22997062623,
+          "breadth_percent": 39.122666666667,
+          "depth_percent": 63.0410186759
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 67.93500526717,
+          "breadth_percent": 61.122666666667,
+          "depth_percent": 76.248965011804
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 54.419801996464,
+          "breadth_percent": 50.223111111111,
+          "depth_percent": 59.208636727644
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 62.725838816231,
+          "breadth_percent": 54.477333333333,
+          "depth_percent": 72.487752639686
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 54.379563563317,
+          "breadth_percent": 45.816,
+          "depth_percent": 65.587070564664
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 58.381820561497,
+          "breadth_percent": 55.253333333333,
+          "depth_percent": 62.246402462407
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 50.389804723644,
+          "breadth_percent": 41.693333333333,
+          "depth_percent": 61.392488460856
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 58.386301759245,
+          "breadth_percent": 59.904,
+          "depth_percent": 57.554922186858
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 54.093807509209,
+          "breadth_percent": 54.365333333333,
+          "depth_percent": 54.086308860821
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 51.823428050707,
+          "breadth_percent": 51.858666666667,
+          "depth_percent": 52.312677308481
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 52.876117001653,
+          "breadth_percent": 51.517333333333,
+          "depth_percent": 54.54651835396
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 47.257237547112,
+          "breadth_percent": 41.8,
+          "depth_percent": 54.55486352905
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 40.967009599892,
+          "breadth_percent": 40.864,
+          "depth_percent": 42.086226807703
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 39.528229850388,
+          "breadth_percent": 32.568,
+          "depth_percent": 48.643071987371
+        }
+      ]
+    },
+    {
+      "name": "Sports & Fitness",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 44.411993953897,
+          "breadth_percent": 41.174222222222,
+          "depth_percent": 48.550110260694
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 42.787864292623,
+          "breadth_percent": 40.663111111111,
+          "depth_percent": 46.311995090569
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 31.735594847954,
+          "breadth_percent": 26.549333333333,
+          "depth_percent": 38.339450867983
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 49.387198691083,
+          "breadth_percent": 45.983111111111,
+          "depth_percent": 53.476504399602
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 46.699858624546,
+          "breadth_percent": 50.607111111111,
+          "depth_percent": 43.335162696463
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 42.934999694896,
+          "breadth_percent": 41.56,
+          "depth_percent": 44.660489753702
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 36.060134983139,
+          "breadth_percent": 33.569777777778,
+          "depth_percent": 39.162846522452
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 41.411060990716,
+          "breadth_percent": 40.011555555556,
+          "depth_percent": 43.466107533275
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 33.345939700523,
+          "breadth_percent": 29.783111111111,
+          "depth_percent": 37.459856819731
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 41.240576780127,
+          "breadth_percent": 38.353777777778,
+          "depth_percent": 45.907312768613
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 41.128460957445,
+          "breadth_percent": 40.162666666667,
+          "depth_percent": 42.250634930807
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 37.348544258896,
+          "breadth_percent": 33.501333333333,
+          "depth_percent": 42.689034472627
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 40.194190849584,
+          "breadth_percent": 37.64,
+          "depth_percent": 44.150682414084
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 38.120106661745,
+          "breadth_percent": 34.164444444444,
+          "depth_percent": 43.577431672494
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 35.488097848081,
+          "breadth_percent": 35.744,
+          "depth_percent": 35.746830867841
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 31.655597401653,
+          "breadth_percent": 32.506666666667,
+          "depth_percent": 32.297556817546
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 49.001696148418,
+          "breadth_percent": 44.666666666667,
+          "depth_percent": 54.298508989733
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 37.914877071697,
+          "breadth_percent": 31.122666666667,
+          "depth_percent": 47.071619148757
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 19.867852838775,
+          "breadth_percent": 15.053333333333,
+          "depth_percent": 28.513390763735
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 54.594208919005,
+          "breadth_percent": 52.930666666667,
+          "depth_percent": 56.637999782322
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 36.023312082544,
+          "breadth_percent": 35.658666666667,
+          "depth_percent": 36.86717295475
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 49.104966427678,
+          "breadth_percent": 46.128,
+          "depth_percent": 52.817231934667
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 39.99400296542,
+          "breadth_percent": 35.738666666667,
+          "depth_percent": 45.177099110334
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 39.362858502697,
+          "breadth_percent": 37.912,
+          "depth_percent": 41.235989514832
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 27.045266666734,
+          "breadth_percent": 20.986666666667,
+          "depth_percent": 36.682456805984
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 46.284959893593,
+          "breadth_percent": 43.117333333333,
+          "depth_percent": 50.210328927895
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 42.689998528557,
+          "breadth_percent": 41.328,
+          "depth_percent": 45.75647422837
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 44.213182322669,
+          "breadth_percent": 41.818666666667,
+          "depth_percent": 47.837226448636
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 41.389109978414,
+          "breadth_percent": 39.845333333333,
+          "depth_percent": 43.765310154006
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 34.43325133213,
+          "breadth_percent": 32.976,
+          "depth_percent": 37.019128887478
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 30.367409989988,
+          "breadth_percent": 26.658666666667,
+          "depth_percent": 34.920959451858
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 25.838879238172,
+          "breadth_percent": 24.573333333333,
+          "depth_percent": 27.989624010234
+        }
+      ]
+    },
+    {
+      "name": "Travel",
+      "case_count": 6,
+      "results": [
+        {
+          "system_id": "o3_deep_research",
+          "overall_percent": 49.625994529188,
+          "breadth_percent": 45.922666666667,
+          "depth_percent": 54.452237795362
+        },
+        {
+          "system_id": "sonar_deep_research",
+          "overall_percent": 45.969706190436,
+          "breadth_percent": 41.061333333333,
+          "depth_percent": 52.003914306707
+        },
+        {
+          "system_id": "qwen_deep_research",
+          "overall_percent": 35.389258289698,
+          "breadth_percent": 29.165333333333,
+          "depth_percent": 43.705389974397
+        },
+        {
+          "system_id": "claude_opus_5",
+          "overall_percent": 55.892225940647,
+          "breadth_percent": 52.064,
+          "depth_percent": 60.459636477561
+        },
+        {
+          "system_id": "grok_4_5",
+          "overall_percent": 54.321712860546,
+          "breadth_percent": 52.909333333333,
+          "depth_percent": 56.233133761162
+        },
+        {
+          "system_id": "gpt_5_6_sol",
+          "overall_percent": 46.119755301044,
+          "breadth_percent": 46.210666666667,
+          "depth_percent": 46.281491274736
+        },
+        {
+          "system_id": "gemini_3_1_pro_preview",
+          "overall_percent": 42.733780777011,
+          "breadth_percent": 37.986666666667,
+          "depth_percent": 49.269625529234
+        },
+        {
+          "system_id": "sonar_reasoning_pro",
+          "overall_percent": 47.251449410942,
+          "breadth_percent": 46.490666666667,
+          "depth_percent": 48.6632017025
+        },
+        {
+          "system_id": "qwen3_8_max_native",
+          "overall_percent": 30.677794535401,
+          "breadth_percent": 25.170666666667,
+          "depth_percent": 38.661835704567
+        },
+        {
+          "system_id": "qwen3_8_max",
+          "overall_percent": 49.396311597559,
+          "breadth_percent": 53.757333333333,
+          "depth_percent": 46.894010279187
+        },
+        {
+          "system_id": "glm5_2",
+          "overall_percent": 48.699842013427,
+          "breadth_percent": 52.565333333333,
+          "depth_percent": 45.974425704462
+        },
+        {
+          "system_id": "minimax_m3",
+          "overall_percent": 50.661416080613,
+          "breadth_percent": 55.730666666667,
+          "depth_percent": 47.673907472903
+        },
+        {
+          "system_id": "deepseek_v4_flash",
+          "overall_percent": 40.279350684424,
+          "breadth_percent": 44.653333333333,
+          "depth_percent": 37.883530515114
+        },
+        {
+          "system_id": "deepseek_v4_pro",
+          "overall_percent": 39.264259578522,
+          "breadth_percent": 45.178666666667,
+          "depth_percent": 35.693809973794
+        },
+        {
+          "system_id": "qwen3_7_plus",
+          "overall_percent": 34.217063649648,
+          "breadth_percent": 36.864,
+          "depth_percent": 32.889161495116
+        },
+        {
+          "system_id": "gemma4_31b",
+          "overall_percent": 34.64064289447,
+          "breadth_percent": 35.885333333333,
+          "depth_percent": 33.997861872052
+        }
+      ]
+    }
+  ]
+}

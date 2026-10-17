@@ -1,0 +1,80 @@
+{
+  "teaser": {
+    "width": 2200,
+    "height": 507,
+    "source": "arxiv/figures/teaser.pdf",
+    "sha256": "0b0e156c86e26925ce07ba2c4dd65e07330b58f3d5dbcf72d28568c4248ffe29"
+  },
+  "teaser-concept": {
+    "width": 1300,
+    "height": 599
+  },
+  "teaser-results": {
+    "width": 1300,
+    "height": 599
+  },
+  "construction": {
+    "width": 2200,
+    "height": 1399,
+    "source": "arxiv/figures/main_method_overview.pdf",
+    "sha256": "e99e68b57dec09b3acf13426c65ec0b0b891eebb6b5e61698ba47155b7b3f426"
+  },
+  "case-studies": {
+    "width": 2200,
+    "height": 480,
+    "source": "arxiv/figures/case_studies_main_compact_en.pdf",
+    "sha256": "3b114a919f3f67a603554aae4ebf19ddda15f595fe0e01f3e9bab945567b70ef"
+  },
+  "domain-overall": {
+    "width": 2200,
+    "height": 935,
+    "source": "arxiv/figures/domain_scheme3_3_final_v3_overall_coverage_heatmap_en.pdf",
+    "sha256": "e58957b3d7c0849966930453441fd196effa7871c18abf8642e401b0d13bdeed"
+  },
+  "domain-breadth": {
+    "width": 2200,
+    "height": 935,
+    "source": "arxiv/figures/domain_scheme3_3_final_v3_breadth_heatmap_en.pdf",
+    "sha256": "0c9fc727cfbe7027d690f1850b08f53ccad9a96d41795d46e6724a88c6168feb"
+  },
+  "domain-depth": {
+    "width": 2200,
+    "height": 935,
+    "source": "arxiv/figures/domain_scheme3_3_final_v3_depth_heatmap_en.pdf",
+    "sha256": "9fb35587104ba2b232b6a71fe28eb2bb51c11ab7855c926c50d009fdaf1ef254"
+  },
+  "research-framework": {
+    "width": 2200,
+    "height": 734,
+    "source": "arxiv/figures/local_research_framework_overview.pdf",
+    "sha256": "0c9dd6eba0c25db1527a03396da074d28597b888a3736312bb5693961571a35f"
+  },
+  "case-legend-depth": {
+    "width": 1196,
+    "height": 160,
+    "source": "arxiv/figures/case_study_equal_overall_en.pdf",
+    "sha256": "8c2e785a4044cc1f3f9abd48d44e45217c039f369abcafcd97ef062c9ebd8b4e",
+    "page": 1,
+    "bounds_pt": [
+      27,
+      327,
+      326,
+      367
+    ],
+    "export": "Original PDF legend crop, rendered without redrawing labels or marks."
+  },
+  "case-legend-breadth": {
+    "width": 1668,
+    "height": 160,
+    "source": "arxiv/figures/case_study_equal_overall_en.pdf",
+    "sha256": "8c2e785a4044cc1f3f9abd48d44e45217c039f369abcafcd97ef062c9ebd8b4e",
+    "page": 1,
+    "bounds_pt": [
+      435,
+      327,
+      852,
+      367
+    ],
+    "export": "Original PDF legend crop, rendered without redrawing labels or marks."
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "snapshot": "2026-10-14",
+  "basis": "current arXiv manuscript; 1.1-beta0.60 metrics; bundled benchmark release",
+  "statistics": {
+    "domains": 24,
+    "root_entities": 48,
+    "cases": 144,
+    "cases_per_domain": 6,
+    "rubrics": 44102,
+    "rubrics_per_case_mean": 306.2638888888889,
+    "rubrics_per_case_range": [
+      236,
+      310
+    ],
+    "directions_per_case": 10,
+    "max_hops": 3,
+    "rubrics_by_hop": {
+      "1": 1440,
+      "2": 7184,
+      "3": 35478
+    },
+    "evaluated_agent_configurations": 16,
+    "evaluation_report_cells": 2304,
+    "local_framework_trajectories": 1008
+  },
+  "results": [
+    {
+      "system_id": "sonar_deep_research",
+      "name": "Perplexity Sonar Deep Research",
+      "category": "Deep Research System",
+      "overall_percent": 46.064814187534175,
+      "breadth_percent": 39.99861111111111,
+      "depth_percent": 54.078635667690456
+    },
+    {
+      "system_id": "qwen_deep_research",
+      "name": "Qwen Deep Research",
+      "category": "Deep Research System",
+      "overall_percent": 35.159593090964734,
+      "breadth_percent": 29.331111111111106,
+      "depth_percent": 43.36710150591125
+    },
+    {
+      "system_id": "o3_deep_research",
+      "name": "o3 Deep Research",
+      "category": "Deep Research System",
+      "overall_percent": 49.44589872181727,
+      "breadth_percent": 45.775,
+      "depth_percent": 54.31845906293018
+    },
+    {
+      "system_id": "deepseek_v4_flash",
+      "name": "DeepSeek V4 Flash",
+      "category": "Local Research Framework",
+      "overall_percent": 42.62844404495911,
+      "breadth_percent": 41.418055555555554,
+      "depth_percent": 45.041985444297325
+    },
+    {
+      "system_id": "deepseek_v4_pro",
+      "name": "DeepSeek V4 Pro",
+      "category": "Local Research Framework",
+      "overall_percent": 39.21821278455124,
+      "breadth_percent": 36.962407407407404,
+      "depth_percent": 43.034443948050935
+    },
+    {
+      "system_id": "glm5_2",
+      "name": "GLM 5.2",
+      "category": "Local Research Framework",
+      "overall_percent": 45.33683255894736,
+      "breadth_percent": 44.607907407407396,
+      "depth_percent": 47.091987757238215
+    },
+    {
+      "system_id": "gemma4_31b",
+      "name": "Gemma 4 31B",
+      "category": "Local Research Framework",
+      "overall_percent": 32.001535486878105,
+      "breadth_percent": 30.426722222222217,
+      "depth_percent": 34.8170248865719
+    },
+    {
+      "system_id": "minimax_m3",
+      "name": "MiniMax M3",
+      "category": "Local Research Framework",
+      "overall_percent": 45.34285452214381,
+      "breadth_percent": 44.336796296296285,
+      "depth_percent": 47.54693345056076
+    },
+    {
+      "system_id": "qwen3_7_plus",
+      "name": "Qwen3.7 Plus",
+      "category": "Local Research Framework",
+      "overall_percent": 36.103861276740226,
+      "breadth_percent": 35.37316666666667,
+      "depth_percent": 37.94113261996284
+    },
+    {
+      "system_id": "qwen3_8_max",
+      "name": "Qwen3.8 Max",
+      "category": "Local Research Framework",
+      "overall_percent": 47.937784106823244,
+      "breadth_percent": 46.62149999999999,
+      "depth_percent": 50.36605501204446
+    },
+    {
+      "system_id": "claude_opus_5",
+      "name": "Claude Opus 5",
+      "category": "Native Search LLM",
+      "overall_percent": 57.03587299453,
+      "breadth_percent": 53.0869074074074,
+      "depth_percent": 61.907797074574844
+    },
+    {
+      "system_id": "gpt_5_6_sol",
+      "name": "GPT-5.6 Sol",
+      "category": "Native Search LLM",
+      "overall_percent": 47.80215686957627,
+      "breadth_percent": 43.13096296296297,
+      "depth_percent": 53.95907155104563
+    },
+    {
+      "system_id": "gemini_3_1_pro_preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "category": "Native Search LLM",
+      "overall_percent": 45.49925551093299,
+      "breadth_percent": 42.64877777777778,
+      "depth_percent": 49.44029546891727
+    },
+    {
+      "system_id": "grok_4_5",
+      "name": "Grok 4.5",
+      "category": "Native Search LLM",
+      "overall_percent": 50.978429743961584,
+      "breadth_percent": 49.06001851851851,
+      "depth_percent": 53.69398525622563
+    },
+    {
+      "system_id": "qwen3_8_max_native",
+      "name": "Qwen3.8 Max",
+      "category": "Native Search LLM",
+      "overall_percent": 36.52869798669302,
+      "breadth_percent": 31.082981481481482,
+      "depth_percent": 44.08780215098084
+    },
+    {
+      "system_id": "sonar_reasoning_pro",
+      "name": "Sonar Reasoning Pro",
+      "category": "Native Search LLM",
+      "overall_percent": 44.76194931304466,
+      "breadth_percent": 40.85953703703703,
+      "depth_percent": 50.24489160911444
+    }
+  ],
+  "human_agreement": {
+    "reports": 12,
+    "rubric_labels": 3695,
+    "binary_macro_f1": 0.8925877937,
+    "ternary_macro_f1": 0.8057916352
+  }
+}

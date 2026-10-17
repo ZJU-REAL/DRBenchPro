@@ -6,7 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-COPY pyproject.toml README.md LICENSE MANIFEST.in ./
+COPY pyproject.toml README.md LICENSE DATA_LICENSE MANIFEST.in ./
+COPY licenses ./licenses
+COPY data/WIKIPEDIA_SOURCES.txt ./data/WIKIPEDIA_SOURCES.txt
 COPY src ./src
 
 RUN python -m pip install --no-cache-dir ".[local-research]" \

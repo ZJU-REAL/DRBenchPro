@@ -12,6 +12,6 @@
       "bytes": 16632210
     }
   },
-  "public_download_url": null,
-  "license_status": "author decision pending; Wikipedia-derived material requires separate attribution/terms review"
+  "public_download_url": "https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro",
+  "license_status": "CC-BY-SA-4.0 for project-owned contributions; upstream Wikipedia terms and attribution apply; see DATA_LICENSE"
 }

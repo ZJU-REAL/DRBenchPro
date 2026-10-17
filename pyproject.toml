@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=69", "wheel"]
+requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "drbenchpro"
@@ -7,6 +7,9 @@ version = "0.3.0"
 description = "DRBenchPro construction, rubric evaluation, structural metrics and local research framework"
 requires-python = ">=3.11"
 readme = "README.md"
+# Separate scopes: MIT software; CC BY-SA benchmark/source-link compilation.
+license = "MIT AND CC-BY-SA-4.0"
+license-files = ["LICENSE", "DATA_LICENSE", "licenses/CC-BY-SA-4.0.txt", "data/WIKIPEDIA_SOURCES.txt"]
 dependencies = ["PyYAML>=6,<7", "httpx>=0.27,<1", "openai>=1.60,<3"]
 [project.optional-dependencies]
 construction = ["requests>=2.31,<3", "beautifulsoup4>=4.12,<5", "rich>=13,<15"]
