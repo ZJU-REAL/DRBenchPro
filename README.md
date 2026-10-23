@@ -15,6 +15,7 @@
   <sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author
 </p>
 <p>
+  <a href="https://zjureal.com/DRBenchPro/"><img src="https://img.shields.io/badge/Webpage-DRBenchPro-3273dc" alt="DRBenchPro project webpage"></a>
   <a href="https://github.com/ZJU-REAL/DRBenchPro"><img src="https://img.shields.io/badge/Code-DRBenchPro-24292f?logo=github" alt="DRBenchPro code"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Code_License-MIT-blue" alt="Original DRBenchPro code: MIT License"></a>
   <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-ffc107" alt="DRBenchPro benchmark on Hugging Face"></a>
@@ -23,6 +24,7 @@
   <a href="#quick-start"><img src="https://img.shields.io/badge/Python-3.11%2B-3776ab?logo=python&logoColor=white" alt="Python 3.11 or newer"></a>
 </p>
 <p>
+  <a href="https://zjureal.com/DRBenchPro/">Project Webpage</a> ·
   <a href="#overview">Overview</a> ·
   <a href="#benchmark">Benchmark</a> ·
   <a href="#main-results">Results</a> ·
@@ -365,7 +367,9 @@ after installing the `dev` extra.
 
 ## Citation and Contact
 
-The public project-page URL, paper URL, and BibTeX will be added when available.
+Visit the [project webpage](https://zjureal.com/DRBenchPro/) for the benchmark
+overview, leaderboard, and analysis. The paper URL and BibTeX will be added when
+available.
 The [benchmark dataset](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro)
 and [Framework Image](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime)
 are available on Hugging Face as separate resources.
