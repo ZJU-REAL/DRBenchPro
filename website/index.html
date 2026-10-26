@@ -97,11 +97,11 @@
     <div class="teaser section">
       <div class="container is-max-desktop">
         <figure>
-          <button type="button" class="figure-trigger" data-zoom="assets/images/teaser.webp" data-title="Structured knowledge coverage in DRBenchPro" disabled aria-label="Enlarge the DRBenchPro teaser">
-            <img class="teaser-desktop" src="assets/images/teaser.webp" alt="Reports with the same flat coverage show broad and shallow, focused and continuous, or distributed and uneven coverage; native search LLMs have different breadth and depth rankings." width="2200" height="507" fetchpriority="high">
+          <button type="button" class="figure-trigger" data-zoom="assets/images/teaser.webp?v=316d8f54ccf9" data-title="Structured knowledge coverage in DRBenchPro" disabled aria-label="Enlarge the DRBenchPro teaser">
+            <img class="teaser-desktop" src="assets/images/teaser.webp?v=316d8f54ccf9" alt="Reports with the same flat coverage show broad and shallow, focused and continuous, or distributed and uneven coverage; native search LLMs have different breadth and depth rankings." width="2200" height="500" fetchpriority="high">
             <span class="teaser-mobile">
-              <img src="assets/images/teaser-concept.webp" alt="Three reports cover different directions and knowledge chains in the same reference tree." width="1300" height="599">
-              <img src="assets/images/teaser-results.webp" alt="Breadth and depth leaderboards for five native search LLMs." width="1300" height="599">
+              <img src="assets/images/teaser-concept.webp?v=7be608b52abc" alt="Three reports cover different directions and knowledge chains in the same reference tree." width="1300" height="590">
+              <img src="assets/images/teaser-results.webp?v=0033bb5306b2" alt="Breadth and depth leaderboards for five native search LLMs." width="1300" height="590">
             </span>
           </button>
           <figcaption class="teaser-caption">Reports with the same flat coverage can exhibit different coverage patterns over a shared reference tree. Breadth and depth also reveal distinct rankings among native search LLMs.</figcaption>
@@ -124,7 +124,7 @@
         <h2 class="section-title">Benchmark Construction and Evaluation</h2>
         <figure class="paper-figure">
           <div class="figure-scroll" tabindex="0" role="region" aria-label="Benchmark construction diagram; scroll horizontally on small screens">
-            <button class="figure-trigger wide-diagram" type="button" data-zoom="assets/images/construction.webp" data-title="Benchmark construction and topology-aware coverage evaluation" disabled aria-label="Enlarge the construction diagram"><img src="assets/images/construction.webp" alt="Wikipedia root entities are expanded into local graphs, sampled into research cases, and used to generate queries and hidden edge-level rubrics. Judge verdicts are aggregated over the tree into breadth, depth, and overall coverage." width="2200" height="1399" loading="lazy"></button>
+            <button class="figure-trigger wide-diagram" type="button" data-zoom="assets/images/construction.webp?v=622c0cd496d0" data-title="Benchmark construction and topology-aware coverage evaluation" disabled aria-label="Enlarge the construction diagram"><img src="assets/images/construction.webp?v=622c0cd496d0" alt="Wikipedia root entities are expanded into local graphs, sampled into research cases, and used to generate queries and hidden edge-level rubrics. Judge verdicts are aggregated over the tree into breadth, depth, and overall coverage." width="2200" height="1032" loading="lazy"></button>
           </div>
 
         </figure>
@@ -291,7 +291,7 @@
     <section id="local-framework" class="section section-muted">
       <div class="container is-max-desktop">
         <h2 class="section-title framework-heading">Local Research Framework</h2>
-        <figure class="paper-figure"><div class="figure-scroll" tabindex="0" role="region" aria-label="Local research framework; scroll horizontally on small screens"><button class="figure-trigger wide-diagram" type="button" data-zoom="assets/images/research-framework.webp" data-title="The shared local research framework" disabled aria-label="Enlarge the local research framework"><img src="assets/images/research-framework.webp" alt="A planner creates three Research Units which collect evidence from fixed Wikipedia through Search and Open. One coverage-gap check may invoke one additional Gap Unit before final report synthesis." width="2200" height="734" loading="lazy"></button></div></figure>
+        <figure class="paper-figure"><div class="figure-scroll" tabindex="0" role="region" aria-label="Local research framework; scroll horizontally on small screens"><button class="figure-trigger wide-diagram" type="button" data-zoom="assets/images/research-framework.webp?v=9fb172248558" data-title="The shared local research framework" disabled aria-label="Enlarge the local research framework"><img src="assets/images/research-framework.webp?v=9fb172248558" alt="A planner creates three Research Units which collect evidence from fixed Wikipedia through Search and Open. One coverage-gap check may invoke one additional Gap Unit before final report synthesis." width="2200" height="734" loading="lazy"></button></div></figure>
         <div class="reading-width content framework-analysis">
           <p>The local research framework standardizes the evidence corpus, tool interface, workflow, and interaction budget across backbone LLMs. All retrieval runs locally over the fixed English Wikipedia snapshot <a href="https://dumps.wikimedia.org/enwiki/20260701/" target="_blank" rel="noopener noreferrer" aria-label="Get the July 1, 2026 English Wikipedia dump used for enwiki-20260701-v1"><code>enwiki-20260701-v1</code></a>. Provider-native web search is disabled: Search identifies pages in the offline corpus, and Open reads their contents. Every backbone therefore searches the same time-invariant evidence space, avoiding changes in external web content and search results.</p>
           <p>The backbone decomposes each query into three Research Units that collect evidence concurrently through these local tools. Their notes undergo one coverage-gap check; at most one Gap Unit gathers supplemental evidence before final report synthesis. The shared setting leaves planning, tool-use choices, evidence selection, and report generation to each backbone, enabling controlled comparison of their research behavior.</p>

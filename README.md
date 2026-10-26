@@ -35,7 +35,7 @@
 </div>
 
 <p align="center">
-  <img src="assets/readme/teaser.webp" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
+  <img src="assets/readme/teaser.webp?v=316d8f54ccf9" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
 </p>
 
 ## Overview
@@ -75,7 +75,7 @@ your own model or research system independently of the bundled framework.
 | Evaluated agent configurations in the paper | **16** |
 
 <p align="center">
-  <img src="assets/readme/construction.webp" alt="DRBenchPro pipeline: Wikipedia-derived local trees, subgraph sampling, shared query and rubric construction, and topology-aware Breadth/Depth/Overall evaluation." width="1000">
+  <img src="assets/readme/construction.webp?v=622c0cd496d0" alt="DRBenchPro pipeline: Wikipedia-derived local trees, subgraph sampling, shared query and rubric construction, and topology-aware Breadth/Depth/Overall evaluation." width="1000">
 </p>
 
 The dataset is included in this GitHub repository as **uncompressed UTF-8
@@ -290,7 +290,7 @@ Analysis → Synthesis** workflow. Backbones use the same Search/Open interface
 and tool budgets. The implementation and selected model profiles are included.
 
 <p align="center">
-  <img src="assets/readme/research-framework.webp" alt="Local Research Framework: a planner creates research units, units collect grounded Wikipedia evidence, a gap check may request further research, and synthesis produces the report." width="1000">
+  <img src="assets/readme/research-framework.webp?v=9fb172248558" alt="Local Research Framework: a planner creates research units, units collect grounded Wikipedia evidence, a gap check may request further research, and synthesis produces the report." width="1000">
 </p>
 
 The prebuilt

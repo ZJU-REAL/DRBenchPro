@@ -115,9 +115,15 @@ Update global scores, domain scores, and the original paper figures together
 when changing the benchmark snapshot.
 
 `assets/data/figures.json` records original manuscript filenames, PDF checksums,
-and web-image dimensions. Website copies are exported from the arXiv manuscript
-figures. The teaser is trimmed as in the manuscript and its two existing panels
-are stacked on mobile. Original figure PDFs are retained as source assets. Website
+and web-image dimensions. Website copies are exported from the selected arXiv figure PDFs:
+`main_method/main-method-v20-cropped.pdf`,
+`local_research_framework/edit-v3.pdf`, and `teaser/teaser-v4-cropped.pdf`
+under `arxiv/figures/`. Use each PDF's CropBox without an additional teaser trim.
+The teaser's left and right panels are exported separately and stacked on mobile;
+their PDF crop coordinates are recorded in `figures.json`. Original figure PDFs
+are retained as source assets. README figures reuse the website WebP files, and
+the HF dataset card keeps a separate copy of `construction.webp`. Image URLs use
+content-hash version queries; refresh them whenever a figure changes. Website
 development does not edit manuscript sources.
 
 ## Deployment

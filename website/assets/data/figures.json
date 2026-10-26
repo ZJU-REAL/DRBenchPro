@@ -1,23 +1,63 @@
 {
   "teaser": {
     "width": 2200,
-    "height": 507,
-    "source": "arxiv/figures/teaser.pdf",
-    "sha256": "0b0e156c86e26925ce07ba2c4dd65e07330b58f3d5dbcf72d28568c4248ffe29"
+    "height": 500,
+    "source": "arxiv/figures/teaser/teaser-v4-cropped.pdf",
+    "sha256": "c4cbc87a79e81c05f98bbeb7f528a64abc81a2b9e3b3cde4f96309ae71b8b488",
+    "page": 1,
+    "bounds_pt": [
+      0.0,
+      78.5,
+      1536.0,
+      427.0
+    ],
+    "coordinate_system": "PDF bottom-left; CropBox",
+    "export": "Rendered from the selected PDF CropBox without additional trim."
   },
   "teaser-concept": {
     "width": 1300,
-    "height": 599
+    "height": 590,
+    "source": "arxiv/figures/teaser/teaser-v4-cropped.pdf",
+    "sha256": "c4cbc87a79e81c05f98bbeb7f528a64abc81a2b9e3b3cde4f96309ae71b8b488",
+    "page": 1,
+    "bounds_pt": [
+      0.0,
+      78.5,
+      768.0,
+      427.0
+    ],
+    "coordinate_system": "PDF bottom-left",
+    "export": "Left/right panel of the selected PDF CropBox; no redrawing."
   },
   "teaser-results": {
     "width": 1300,
-    "height": 599
+    "height": 590,
+    "source": "arxiv/figures/teaser/teaser-v4-cropped.pdf",
+    "sha256": "c4cbc87a79e81c05f98bbeb7f528a64abc81a2b9e3b3cde4f96309ae71b8b488",
+    "page": 1,
+    "bounds_pt": [
+      768.0,
+      78.5,
+      1536.0,
+      427.0
+    ],
+    "coordinate_system": "PDF bottom-left",
+    "export": "Left/right panel of the selected PDF CropBox; no redrawing."
   },
   "construction": {
     "width": 2200,
-    "height": 1399,
-    "source": "arxiv/figures/main_method_overview.pdf",
-    "sha256": "e99e68b57dec09b3acf13426c65ec0b0b891eebb6b5e61698ba47155b7b3f426"
+    "height": 1032,
+    "source": "arxiv/figures/main_method/main-method-v20-cropped.pdf",
+    "sha256": "a32ce6f35a9845bd93af593b325361b3c125baf2715a96cf06ab2dd8add57395",
+    "page": 1,
+    "bounds_pt": [
+      6.317,
+      8.97692308,
+      1323.352,
+      626.24359
+    ],
+    "coordinate_system": "PDF bottom-left; CropBox",
+    "export": "Rendered from the selected PDF CropBox without additional trim."
   },
   "case-studies": {
     "width": 2200,
@@ -46,8 +86,17 @@
   "research-framework": {
     "width": 2200,
     "height": 734,
-    "source": "arxiv/figures/local_research_framework_overview.pdf",
-    "sha256": "0c9dd6eba0c25db1527a03396da074d28597b888a3736312bb5693961571a35f"
+    "source": "arxiv/figures/local_research_framework/edit-v3.pdf",
+    "sha256": "3254e139481d6532a05caf4efd57708b0be4a81998bc4af0fe9a37a7bd7a4a1e",
+    "page": 1,
+    "bounds_pt": [
+      0.0,
+      0.0,
+      1800.0,
+      600.0
+    ],
+    "coordinate_system": "PDF bottom-left; CropBox",
+    "export": "Rendered from the selected PDF CropBox without additional trim."
   },
   "case-legend-depth": {
     "width": 1196,
