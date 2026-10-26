@@ -35,7 +35,7 @@
 </div>
 
 <p align="center">
-  <img src="assets/readme/teaser.webp?v=316d8f54ccf9" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
+  <img src="assets/readme/teaser.webp?v=d3701d97d606" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
 </p>
 
 ## Overview

@@ -117,7 +117,7 @@ when changing the benchmark snapshot.
 `assets/data/figures.json` records original manuscript filenames, PDF checksums,
 and web-image dimensions. Website copies are exported from the selected arXiv figure PDFs:
 `main_method/main-method-v20-cropped.pdf`,
-`local_research_framework/edit-v3.pdf`, and `teaser/teaser-v4-cropped.pdf`
+`local_research_framework/edit-v3.pdf`, and `teaser/teaser-v5-cropped.pdf`
 under `arxiv/figures/`. Use each PDF's CropBox without an additional teaser trim.
 The teaser's left and right panels are exported separately and stacked on mobile;
 their PDF crop coordinates are recorded in `figures.json`. Original figure PDFs

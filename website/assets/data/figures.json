@@ -2,8 +2,8 @@
   "teaser": {
     "width": 2200,
     "height": 500,
-    "source": "arxiv/figures/teaser/teaser-v4-cropped.pdf",
-    "sha256": "c4cbc87a79e81c05f98bbeb7f528a64abc81a2b9e3b3cde4f96309ae71b8b488",
+    "source": "arxiv/figures/teaser/teaser-v5-cropped.pdf",
+    "sha256": "0ede613a424f92b3265ddcfc23256581b01af4a32915d598428504f72e3a8029",
     "page": 1,
     "bounds_pt": [
       0.0,
@@ -17,8 +17,8 @@
   "teaser-concept": {
     "width": 1300,
     "height": 590,
-    "source": "arxiv/figures/teaser/teaser-v4-cropped.pdf",
-    "sha256": "c4cbc87a79e81c05f98bbeb7f528a64abc81a2b9e3b3cde4f96309ae71b8b488",
+    "source": "arxiv/figures/teaser/teaser-v5-cropped.pdf",
+    "sha256": "0ede613a424f92b3265ddcfc23256581b01af4a32915d598428504f72e3a8029",
     "page": 1,
     "bounds_pt": [
       0.0,
@@ -32,8 +32,8 @@
   "teaser-results": {
     "width": 1300,
     "height": 590,
-    "source": "arxiv/figures/teaser/teaser-v4-cropped.pdf",
-    "sha256": "c4cbc87a79e81c05f98bbeb7f528a64abc81a2b9e3b3cde4f96309ae71b8b488",
+    "source": "arxiv/figures/teaser/teaser-v5-cropped.pdf",
+    "sha256": "0ede613a424f92b3265ddcfc23256581b01af4a32915d598428504f72e3a8029",
     "page": 1,
     "bounds_pt": [
       768.0,
