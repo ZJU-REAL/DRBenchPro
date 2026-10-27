@@ -6,7 +6,7 @@
 <p>
   <strong>Han Huang<sup>1,*</sup></strong>,
   <strong>Yuchen Yan<sup>1,*</sup></strong>,
-  Xingyu Wu<sup>1</sup>, Yijun Li<sup>1</sup>,<br>
+  Xingyu Wu<sup>1,2</sup>, Yijun Li<sup>1</sup>,<br>
   Chao Deng<sup>2</sup>, Jie Liu<sup>2</sup>, Jin Ma<sup>2</sup>,
   Yongliang Shen<sup>1,†</sup>
 </p>
