@@ -16,7 +16,7 @@ work below the GitHub project path `/DRBenchPro/`.
 
 ## Content and interactions
 
-The page has a publication header, animated leaderboard, teaser and six sections: Abstract, Benchmark
+The page has a publication header, overview video, animated leaderboard, teaser and six sections: Abstract, Benchmark
 Construction and Evaluation, Main Results, Analysis, Local Research Framework,
 and BibTeX. Metric definitions appear in the method section, after Abstract.
 Abstract reproduces the complete current paper abstract. Analysis contains a
@@ -61,6 +61,27 @@ disabled until its verified URL is available. BibTeX is intentionally empty, wit
 heading retained; no provisional entry or copy action is displayed. The full
 Query/report/rubric case explorer remains deferred.
 
+### Overview video
+
+The header's **Video** link jumps to the 16:9 player between the benchmark scale
+and leaderboard. `assets/video/drbenchpro-overview.mp4` is the 2:07 English
+overview, served locally as H.264/AAC with the MP4 metadata moved to the front
+for progressive playback. It uses `preload="none"`, starts only on request, and
+does not loop. Native playback, volume, seeking and fullscreen controls appear
+after clicking the central play button. Without JavaScript, native controls
+remain available. Playback failures offer a direct MP4 link.
+
+The 960px-wide player scales to mobile and keeps a white background, subtle
+border, 12px corners and a blue play button. `assets/images/video-placeholder.svg`
+is an intentionally blank white poster. **TODO: replace it with the dedicated
+video cover once available.** Keep the poster 16:9 and update its URL when
+replacing it. Reduced-motion preferences disable the play-button animation.
+
+While the video plays, leaderboard autoplay is suspended without changing the
+visitor's playback preference or the current scene's remaining time. Pausing or
+finishing the video restores autoplay only if it was enabled, the leaderboard
+is visible, and reduced motion is off. Manual leaderboard browsing stays paused.
+
 The fixed corpus label links to the original dated source dump at
 `https://dumps.wikimedia.org/enwiki/20260701/`, matching the downloader's
 `DUMP_BASE_URL`. This is the raw Wikimedia dump, not the processed project index.
@@ -98,7 +119,7 @@ typography and spacing; tablet/mobile layouts preserve readable wrapped labels.
 Pause, previous/next, global metric buttons and domain selection support manual browsing;
 manual actions pause playback. The table also supports left/right arrow keys.
 Playback preserves the remaining scene time when the section leaves the viewport
-or the document becomes hidden. Reduced-motion users get static manual browsing.
+or the document becomes hidden, and while the overview video plays. Reduced-motion users get static manual browsing.
 If JavaScript is disabled, the original Main Results table remains available.
 
 `assets/data/domain-results.json` contains 384 validated system–domain cells

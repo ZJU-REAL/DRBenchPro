@@ -48,6 +48,7 @@
     const progress = section.querySelector(".leaderboard-progress span");
     const position = document.getElementById("leaderboard-position");
     const announcement = document.getElementById("leaderboard-announcement");
+    const overviewVideo = document.getElementById("overview-video");
     const categories = {
       "Deep Research System": { key: "deep", label: "Deep Research System" },
       "Native Search LLM": { key: "native", label: "Native Search LLM" },
@@ -90,7 +91,8 @@
       progressAnimation?.pause();
     }
     function syncPlayback() {
-      const playing = wantsPlayback && inView && !document.hidden && !motion.matches;
+      const videoPlaying = overviewVideo && !overviewVideo.paused && !overviewVideo.ended && !overviewVideo.error;
+      const playing = wantsPlayback && inView && !document.hidden && !motion.matches && !videoPlaying;
       if (playing && timer === undefined) {
         startedAt = performance.now();
         progressAnimation?.play();
@@ -103,10 +105,10 @@
         stopTimer();
       }
       card.dataset.playing = String(playing);
-      playButton.textContent = wantsPlayback ? "Pause" : "Play";
-      playButton.setAttribute("aria-label", wantsPlayback ? "Pause automatic playback" : "Resume automatic playback");
-      playButton.disabled = motion.matches;
-      playButton.title = motion.matches ? "Use manual controls with reduced motion enabled" : "";
+      playButton.textContent = videoPlaying ? "Paused" : wantsPlayback ? "Pause" : "Play";
+      playButton.setAttribute("aria-label", videoPlaying ? "Automatic playback paused while video plays" : wantsPlayback ? "Pause automatic playback" : "Resume automatic playback");
+      playButton.disabled = motion.matches || Boolean(videoPlaying);
+      playButton.title = videoPlaying ? "Automatic playback resumes after the video pauses or ends, unless manually paused" : motion.matches ? "Use manual controls with reduced motion enabled" : "";
     }
     function render(manual = false) {
       stopTimer();
@@ -219,6 +221,7 @@
       advance(event.key === "ArrowRight" ? 1 : -1);
     });
     document.addEventListener("visibilitychange", syncPlayback);
+    ["play", "pause", "ended", "error", "emptied"].forEach((event) => overviewVideo?.addEventListener(event, syncPlayback));
     motion.addEventListener("change", () => {
       if (motion.matches) wantsPlayback = false;
       render();

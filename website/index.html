@@ -12,10 +12,11 @@
   <link rel="icon" href="assets/icons/database.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/bulma.min.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=ebde513eebae">
+  <link rel="stylesheet" href="assets/css/site.css?v=2c66aa764d36">
   <link rel="stylesheet" href="assets/css/leaderboard.css">
   <script src="assets/js/site.js?v=74893140a523" defer></script>
-  <script src="assets/js/leaderboard.js" defer></script>
+  <script src="assets/js/overview-video.js?v=9738c386a13f" defer></script>
+  <script src="assets/js/leaderboard.js?v=ec8d4db9bdd0" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#abstract">Skip to content</a>
@@ -38,6 +39,7 @@
         <p class="publication-contributions"><span><sup>*</sup>Equal contribution</span> <span><sup>†</sup>Corresponding author</span></p>
         <div class="publication-links" aria-label="Project resources">
           <button class="resource-button" type="button" disabled title="arXiv link coming soon" aria-label="arXiv (link coming soon)"><img class="icon-image" src="assets/icons/file-text.svg" alt="">arXiv</button>
+          <a class="resource-button" href="#video"><img class="icon-image" src="assets/icons/play.svg" alt="">Video</a>
           <a class="resource-button" href="https://github.com/ZJU-REAL/DRBenchPro" target="_blank" rel="noopener noreferrer"><img class="icon-image" src="assets/icons/code-xml.svg" alt="">Code</a>
           <a class="resource-button" href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro" target="_blank" rel="noopener noreferrer"><img class="icon-image" src="assets/icons/database.svg" alt="">Dataset</a>
           <a class="resource-button" href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime" target="_blank" rel="noopener noreferrer" title="DRBenchPro Local Research Framework — Docker Image"><img class="icon-image" src="assets/icons/code-xml.svg" alt="">Framework Image</a>
@@ -50,6 +52,21 @@
         </ul>
       </div>
     </header>
+
+    <section id="video" class="overview-video-section section" aria-label="Project overview video">
+      <figure class="overview-video-figure">
+        <div class="overview-video-frame">
+          <video id="overview-video" src="assets/video/drbenchpro-overview.mp4" controls playsinline preload="none" width="1920" height="1080" poster="assets/images/video-placeholder.svg" aria-label="DRBenchPro project overview" aria-describedby="overview-video-caption">
+            Your browser does not support embedded video. <a href="assets/video/drbenchpro-overview.mp4">Watch the overview</a>.
+          </video>
+          <button id="overview-video-start" class="overview-video-start" type="button" aria-label="Play project overview video (2 minutes 7 seconds)" hidden>
+            <span class="overview-video-play"><img src="assets/icons/play.svg" width="28" height="28" alt=""></span>
+          </button>
+        </div>
+        <figcaption id="overview-video-caption" class="overview-video-caption">Watch the overview</figcaption>
+        <p id="overview-video-error" class="overview-video-error" role="status" hidden>Video could not play. <a href="assets/video/drbenchpro-overview.mp4">Open the video directly</a> or try again using the player controls.</p>
+      </figure>
+    </section>
 
     <section id="leaderboard" class="leaderboard-section section" aria-labelledby="leaderboard-heading" hidden>
       <div class="leaderboard-container">
