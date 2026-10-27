@@ -405,7 +405,7 @@ and [Framework Image](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-ru
 are available on Hugging Face as separate resources.
 
 For questions, use [GitHub Issues](https://github.com/ZJU-REAL/DRBenchPro/issues)
-or contact the corresponding author at [syl@zju.edu.cn](mailto:syl@zju.edu.cn).
+or email [hanhuang@zju.edu.cn](mailto:hanhuang@zju.edu.cn).
 
 <a id="license-and-attribution"></a>
 
