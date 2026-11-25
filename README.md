@@ -79,7 +79,7 @@ your own model or research system independently of the bundled framework.
 | Evaluated agent configurations in the paper | **16** |
 
 <p align="center">
-  <img src="assets/readme/construction.webp?v=622c0cd496d0" alt="DRBenchPro pipeline: Wikipedia-derived local trees, subgraph sampling, shared query and rubric construction, and topology-aware Breadth/Depth/Overall evaluation." width="1000">
+  <img src="assets/readme/construction.webp?v=e5c71bef6063" alt="DRBenchPro pipeline: Wikipedia-derived local trees, subgraph sampling, shared query and rubric construction, and topology-aware Breadth/Depth/Overall evaluation." width="1000">
 </p>
 
 The dataset is included in this GitHub repository as **uncompressed UTF-8

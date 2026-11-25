@@ -46,14 +46,14 @@
   },
   "construction": {
     "width": 2200,
-    "height": 1032,
-    "source": "arxiv/figures/main_method/main-method-v20-cropped.pdf",
-    "sha256": "a32ce6f35a9845bd93af593b325361b3c125baf2715a96cf06ab2dd8add57395",
+    "height": 1031,
+    "source": "arxiv/figures/main_method/main-method-v21-cropped.pdf",
+    "sha256": "26b3c4479b52aedb139f46f14abf1467c7a35695bc81ede874958b57a99907ec",
     "page": 1,
     "bounds_pt": [
-      6.317,
-      8.97692308,
-      1323.352,
+      6.42791667,
+      9.19871795,
+      1323.46292,
       626.24359
     ],
     "coordinate_system": "PDF bottom-left; CropBox",
