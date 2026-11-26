@@ -56,8 +56,8 @@ b, strong { font-weight: 600; }
 .dp-top-links a { color: var(--dp-ink-2); text-decoration: none; font-size: 15px; white-space: nowrap; }
 .dp-top-links a:hover, .dp-top-links a.is-active { color: var(--dp-ink); }
 .dp-top-links a.is-active { text-decoration: underline; text-decoration-color: var(--dp-line); }
-.dp-top-lab { justify-self: end; display: inline-flex; align-items: center; gap: 8px; color: var(--dp-ink); text-decoration: none; font-weight: 500; font-size: 15px; white-space: nowrap; }
-.dp-top-lab img { width: 24px; height: 24px; }
+.dp-top-lab { justify-self: end; display: inline-flex; align-items: center; gap: 10px; color: var(--dp-ink); text-decoration: none; font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-weight: 700; font-size: 19px; letter-spacing: .01em; line-height: 1; white-space: nowrap; }
+.dp-top-lab img { width: 32px; height: 32px; flex: none; }
 
 /* ---------- hero ---------- */
 .dp-hero { padding-top: 64px; }
@@ -68,6 +68,8 @@ b, strong { font-weight: 600; }
 .dp-hero-nums { margin: 0; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; border-top: 1px solid var(--dp-line); padding-top: 18px; }
 .dp-hero-nums div { display: flex; flex-direction: column-reverse; }
 .dp-hero-nums dd { margin: 0; font: 300 30px/1.1 var(--dp-sans); font-variant-numeric: tabular-nums; }
+.dp-hero-art { margin: 32px 0 0; }
+.dp-hero-art img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .dp-hero-nums dt { font: 500 11px/1 var(--dp-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--dp-muted); margin-top: 8px; white-space: nowrap; }
 .dp-authors { margin-top: 40px; }
 .dp-author-list { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 17px; }
@@ -387,7 +389,7 @@ b, strong { font-weight: 600; }
 .dp-foot { margin-top: 110px; border-top: 1px solid var(--dp-line); padding: 28px 0 40px; }
 .dp-foot-in p { margin: 0 0 6px; font-size: 13.5px; color: var(--dp-muted); }
 .dp-foot a { color: var(--dp-ink-2); }
-.dp-foot-lab { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; text-decoration: none; color: var(--dp-ink) !important; }
+.dp-foot-lab { display: inline-flex; align-items: center; gap: 6px; font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; text-decoration: none; color: var(--dp-ink) !important; }
 .dp-foot-lab img { width: 20px; height: 20px; }
 
 /* ---------- responsive ---------- */
