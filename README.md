@@ -57,13 +57,9 @@ Starting from Wikipedia root entities, we build local knowledge trees and sample
 research scopes. Each sampled tree generates both a research query and a set of
 evidence-grounded rubrics. Agents receive **only the query**; the reference tree
 and rubrics are reserved for evaluation. Keeping the rubric topology makes
-coverage strengths and omissions interpretable through three metrics:
-
-| Metric | What it measures |
-| --- | --- |
-| **Breadth** | Coverage across the selected research directions |
-| **Depth** | Coverage along related knowledge chains |
-| **Overall Coverage** | The geometric mean of case-level Breadth and Depth |
+coverage strengths and omissions interpretable: **Breadth** is coverage across
+the selected research directions, **Depth** is coverage along related knowledge
+chains, and **Overall Coverage** is the geometric mean of case-level Breadth and Depth.
 
 This repository provides the frozen benchmark, Judge prompts, report evaluator,
 structural metrics, benchmark construction code, and the optional
@@ -74,16 +70,9 @@ your own model or research system independently of the bundled framework.
 
 ## 🧩 Benchmark
 
-| Item | Value |
-| --- | --- |
-| Domains | **24** |
-| Root entities | **48** — two per domain |
-| Research cases | **144** — six per domain |
-| Evidence-grounded rubrics | **44,102** |
-| Rubrics per case | **236–310** |
-| Research directions per case | **10** |
-| Maximum rubric depth | **3 hops** |
-| Evaluated agent configurations in the paper | **16** |
+| Domains | Root entities | Research cases | Rubrics | Rubrics / case | Directions / case | Max depth | Agents evaluated |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **24** | **48** | **144** | **44,102** | **236–310** | **10** | **3 hops** | **16** |
 
 <p align="center">
   <img src="assets/readme/construction.webp?v=e5c71bef6063" alt="DRBenchPro pipeline: Wikipedia-derived local trees, subgraph sampling, shared query and rubric construction, and topology-aware Breadth/Depth/Overall evaluation." width="1000">
