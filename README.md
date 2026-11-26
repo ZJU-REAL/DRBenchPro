@@ -1,29 +1,34 @@
 <div align="center">
 
-<h1>🔬 DRBenchPro</h1>
-<h3>🧠 A Knowledge-Centric Benchmark for Professional Deep Research Agents</h3>
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.svg">
+    <img src="assets/title.svg" alt="DRBench Pro" width="360">
+  </picture>
+</h1>
 
-<p>
-  <strong>Han Huang<sup>1,*</sup></strong>,
-  <strong>Yuchen Yan<sup>1,*</sup></strong>,
-  Xingyu Wu<sup>1,2</sup>, Yijun Li<sup>1</sup>,<br>
-  Chao Deng<sup>2</sup>, Jie Liu<sup>2</sup>, Jin Ma<sup>2</sup>,
-  Yongliang Shen<sup>1,†</sup>
+### A Knowledge-Centric Benchmark for Professional Deep Research Agents
+
+</div>
+
+<p align="center">
+Han Huang<sup>1,*</sup>, Yuchen Yan<sup>1,*</sup>, Xingyu Wu<sup>1,2</sup>, Yijun Li<sup>1</sup>, Chao Deng<sup>2</sup>, Jie Liu<sup>2</sup>, Jin Ma<sup>2</sup>, Yongliang Shen<sup>1,†</sup>
 </p>
-<p>
-  <sup>1</sup> Zhejiang University &nbsp; <sup>2</sup> Tencent<br>
-  <sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author
+
+<p align="center">
+<sup>1</sup>Zhejiang University, &nbsp; <sup>2</sup>Tencent<br>
+<sup>*</sup>Equal contribution, &nbsp; <sup>†</sup>Corresponding author
 </p>
-<p>
-  <a href="https://zjureal.com/DRBenchPro/"><img src="https://img.shields.io/badge/Webpage-DRBenchPro-3273dc" alt="DRBenchPro project webpage"></a>
-  <a href="https://github.com/ZJU-REAL/DRBenchPro"><img src="https://img.shields.io/badge/Code-DRBenchPro-24292f?logo=github" alt="DRBenchPro code"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Code_License-MIT-blue" alt="Original DRBenchPro code: MIT License"></a>
-  <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-ffc107" alt="DRBenchPro benchmark on Hugging Face"></a>
-  <a href="DATA_LICENSE"><img src="https://img.shields.io/badge/Data_License-CC_BY--SA_4.0-green" alt="DRBenchPro benchmark data: CC BY-SA 4.0; see scope and attribution"></a>
-  <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime"><img src="https://img.shields.io/badge/Framework_Image-Docker-2496ed?logo=docker&logoColor=white" alt="DRBenchPro Local Research Framework — Docker Image"></a>
-  <a href="#quick-start"><img src="https://img.shields.io/badge/Python-3.11%2B-3776ab?logo=python&logoColor=white" alt="Python 3.11 or newer"></a>
+
+<p align="center">
+  <!-- ARXIV_ID: fill the id into both the badge text and the link after release -->
+  <a href="https://arxiv.org/abs/"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=flat-square"></a>
+  <a href="https://zjureal.com/DRBenchPro/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-3B4FB8?style=flat-square"></a>
+  <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro"><img alt="Hugging Face Dataset" src="https://img.shields.io/badge/🤗%20Dataset-DRBenchPro-FFD21E?style=flat-square"></a>
+  <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime"><img alt="Framework Image on Hugging Face" src="https://img.shields.io/badge/🤗%20Framework%20Image-DRBenchPro--runtime-FFD21E?style=flat-square"></a>
 </p>
-<p>
+
+<p align="center">
   <a href="https://zjureal.com/DRBenchPro/">Project Webpage</a> ·
   <a href="#overview">Overview</a> ·
   <a href="#benchmark">Benchmark</a> ·
@@ -31,8 +36,6 @@
   <a href="#evaluate-your-own-model">Evaluate your model</a> ·
   <a href="#code-and-documentation">Documentation</a>
 </p>
-
-</div>
 
 <p align="center">
   <img src="assets/readme/teaser.webp?v=d3701d97d606" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
@@ -397,9 +400,20 @@ after installing the `dev` extra.
 
 ## 📑 Citation and Contact
 
+If you find DRBench Pro useful, please cite:
+
+<!-- ARXIV_ID: fill journal = {arXiv preprint arXiv:<id>} after release -->
+```bibtex
+@article{huang2026drbenchpro,
+  title   = {DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents},
+  author  = {Huang, Han and Yan, Yuchen and Wu, Xingyu and Li, Yijun and Deng, Chao and Liu, Jie and Ma, Jin and Shen, Yongliang},
+  journal = {arXiv preprint arXiv:},
+  year    = {2026}
+}
+```
+
 Visit the [project webpage](https://zjureal.com/DRBenchPro/) for the benchmark
-overview, leaderboard, and analysis. The paper URL and BibTeX will be added when
-available.
+overview, leaderboard, and analysis.
 The [benchmark dataset](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro)
 and [Framework Image](https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime)
 are available on Hugging Face as separate resources.
