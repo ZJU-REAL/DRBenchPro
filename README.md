@@ -29,6 +29,10 @@ Han Huang<sup>1,*</sup>, Yuchen Yan<sup>1,*</sup>, Xingyu Wu<sup>1,2</sup>, Yiju
 </p>
 
 <p align="center">
+  <img src="assets/hero.jpg" alt="DRBench Pro: a robot gathers books from many shelves, a knowledge tree shows which research directions a report covers (Breadth, teal) and how far it follows chains of related knowledge (Depth, indigo), and a second robot checks the report against a checklist of rubrics" width="100%">
+</p>
+
+<p align="center">
   <a href="https://zjureal.com/DRBenchPro/">Project Webpage</a> ·
   <a href="#overview">Overview</a> ·
   <a href="#benchmark">Benchmark</a> ·
@@ -37,13 +41,13 @@ Han Huang<sup>1,*</sup>, Yuchen Yan<sup>1,*</sup>, Xingyu Wu<sup>1,2</sup>, Yiju
   <a href="#code-and-documentation">Documentation</a>
 </p>
 
-<p align="center">
-  <img src="assets/readme/teaser.webp?v=d3701d97d606" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
-</p>
-
 <a id="overview"></a>
 
 ## 🔎 Overview
+
+<p align="center">
+  <img src="assets/readme/teaser.webp?v=d3701d97d606" alt="Reports can cover the same amount of knowledge with different breadth and depth; the paper compares these dimensions across deep research agents." width="1000">
+</p>
 
 **DRBenchPro measures structured knowledge coverage in deep research reports.**
 It evaluates how comprehensively an agent covers major research directions and
