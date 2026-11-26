@@ -39,8 +39,8 @@ display sizes, so a stale stylesheet cannot blow images up.
 1. **Top bar** – wordmark (left), section links (centre, hidden below 1060px),
    REAL Lab logo + link to `https://zjureal.com` (right).
 2. **Hero** – wordmark title and subtitle, key numbers (24 domains, 144 cases,
-   44,102 rubrics, 16 agents), authors and affiliations, and a five-cell button
-   strip: Paper, Code, Dataset (HF), Framework Image (HF), Video.
+   44,102 rubrics, 16 agents), authors and affiliations, and a six-cell button
+   strip: Paper, HF Paper, Code, Dataset (HF), Framework Image (HF), Video.
 3. **Overview video** – `assets/video/drbenchpro-overview.mp4` (2:07, H.264/AAC,
    `preload="none"`), started from a play pill; native controls appear after start
    and remain available without JavaScript.
@@ -111,14 +111,14 @@ checksums, crop boxes and dimensions of the paper tables and figures exported to
 manuscript changes. Overall Coverage is averaged per case, so it is not the
 geometric mean of the displayed mean breadth and depth.
 
-## arXiv placeholders
+## Paper links and citation metadata
 
-The paper is not on arXiv yet. Two places carry the marker `ARXIV_ID`:
-
-- the Paper button in the hero (`href="https://arxiv.org/abs/"`), and
-- the BibTeX block (`journal = {arXiv preprint arXiv:}`).
-
-`grep -n ARXIV_ID website/index.html` finds both.
+The Paper button links to `https://arxiv.org/abs/2611.34852`; HF Paper links to
+`https://huggingface.co/papers/2611.34852`. The BibTeX block includes the complete
+arXiv identifier and URL and matches the repository README and `CITATION.cff`.
+The HTML head includes citation title, all eight authors, publication date,
+arXiv identifier, abstract URL and PDF URL. Keep these fields aligned when the
+paper metadata changes.
 
 ## Deployment
 

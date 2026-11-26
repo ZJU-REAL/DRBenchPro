@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use DRBenchPro, please cite the paper in preferred-citation."
+type: software
+title: DRBenchPro
+version: 0.3.0
+repository-code: "https://github.com/ZJU-REAL/DRBenchPro"
+url: "https://zjureal.com/DRBenchPro/"
+authors:
+  - family-names: Huang
+    given-names: Han
+  - family-names: Yan
+    given-names: Yuchen
+  - family-names: Wu
+    given-names: Xingyu
+  - family-names: Li
+    given-names: Yijun
+  - family-names: Deng
+    given-names: Chao
+  - family-names: Liu
+    given-names: Jie
+  - family-names: Ma
+    given-names: Jin
+  - family-names: Shen
+    given-names: Yongliang
+preferred-citation:
+  type: article
+  title: "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents"
+  authors:
+    - family-names: Huang
+      given-names: Han
+    - family-names: Yan
+      given-names: Yuchen
+    - family-names: Wu
+      given-names: Xingyu
+    - family-names: Li
+      given-names: Yijun
+    - family-names: Deng
+      given-names: Chao
+    - family-names: Liu
+      given-names: Jie
+    - family-names: Ma
+      given-names: Jin
+    - family-names: Shen
+      given-names: Yongliang
+  journal: arXiv
+  year: 2026
+  date-published: 2026-11-25
+  url: "https://arxiv.org/abs/2611.34852"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.34852"

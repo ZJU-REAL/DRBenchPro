@@ -21,8 +21,8 @@ Han Huang<sup>1,*</sup>, Yuchen Yan<sup>1,*</sup>, Xingyu Wu<sup>1,2</sup>, Yiju
 </p>
 
 <p align="center">
-  <!-- ARXIV_ID: fill the id into both the badge text and the link after release -->
-  <a href="https://arxiv.org/abs/"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-coming%20soon-b31b1b?style=flat-square"></a>
+  <a href="https://arxiv.org/abs/2611.34852"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2611.34852-b31b1b?style=flat-square"></a>
+  <a href="https://huggingface.co/papers/2611.34852"><img alt="Hugging Face Paper" src="https://img.shields.io/badge/🤗%20Paper-2611.34852-FFD21E?style=flat-square"></a>
   <a href="https://zjureal.com/DRBenchPro/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-3B4FB8?style=flat-square"></a>
   <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro"><img alt="Hugging Face Dataset" src="https://img.shields.io/badge/🤗%20Dataset-DRBenchPro-FFD21E?style=flat-square"></a>
   <a href="https://huggingface.co/datasets/zhuiluozhiji/DRBenchPro-runtime"><img alt="Framework Image on Hugging Face" src="https://img.shields.io/badge/🤗%20Framework%20Image-DRBenchPro--runtime-FFD21E?style=flat-square"></a>
@@ -395,13 +395,13 @@ after installing the `dev` extra.
 
 If you find DRBench Pro useful, please cite:
 
-<!-- ARXIV_ID: fill journal = {arXiv preprint arXiv:<id>} after release -->
 ```bibtex
 @article{huang2026drbenchpro,
   title   = {DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents},
   author  = {Huang, Han and Yan, Yuchen and Wu, Xingyu and Li, Yijun and Deng, Chao and Liu, Jie and Ma, Jin and Shen, Yongliang},
-  journal = {arXiv preprint arXiv:},
-  year    = {2026}
+  journal = {arXiv preprint arXiv:2611.34852},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2611.34852}
 }
 ```
 
